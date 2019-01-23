@@ -10,8 +10,10 @@ DrawnWindow::DrawnWindow(QWidget *parent) :
 }
 
 void DrawnWindow::paintEvent(QPaintEvent *) {
-    int imagewidth = 100;
-    int imageheight = 200;
+    int imagewidth = 10;
+    int imageheight = 20;
+    int scaledimagewidth = 200;
+    int scaledimageheight = 400;
     QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
     for(int i=0;i < imagewidth; i++) {
         for(int z = 0; z < imageheight; ++z) {
@@ -19,6 +21,7 @@ void DrawnWindow::paintEvent(QPaintEvent *) {
             background.setPixel(i,z,rgb);
         }
     }
+    QImage scaledImage = background.scaled(scaledimagewidth, scaledimageheight,Qt::KeepAspectRatio);
     QPainter paint(this);
-    paint.drawImage(0,0,background);
+    paint.drawImage(0,0,scaledImage);
 }
