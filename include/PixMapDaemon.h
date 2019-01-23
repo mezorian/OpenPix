@@ -9,11 +9,19 @@
 #ifndef PIXMAPDAEMON_H
 #define PIXMAPDAEMON_H
 
+// ----
+#include <vector>
+// ----
+#include "Pix.h"
+// ----
 
-class PixMapDaemon
-{
-public:
-    PixMapDaemon();
+using namespace std;
+
+class PixMapDaemon {
+    public:
+        PixMapDaemon(unsigned int width_,unsigned int height_);
+        vector<vector<Pix>> pixmap;
+
 };
 
 #endif // PIXMAPDAEMON_H

@@ -20,8 +20,10 @@ INCLUDEPATH += include/
 
 SOURCES += main.cpp \
     DrawnWindow.cpp \
+    src/Pix.cpp \
     src/PixMapDaemon.cpp
 
 HEADERS += \
     DrawnWindow.h \
-    include/PixMapDaemon.h
+    include/PixMapDaemon.h \
+    include/Pix.h
