@@ -11,13 +11,14 @@ DrawnWindow::DrawnWindow(QWidget *parent) :
 
 void DrawnWindow::paintEvent(QPaintEvent *) {
     int imagewidth = 10;
-    int imageheight = 20;
+    int imageheight = 15;
     int scaledimagewidth = 200;
     int scaledimageheight = 400;
     QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
-    for(int i=0;i < imagewidth; i++) {
-        for(int z = 0; z < imageheight; ++z) {
-            QRgb rgb = qRgb(rand()%255,rand()%255,rand()%255);
+    pixmapd.pixmap[5].at(5).setRed(rand()%255);
+    for(unsigned int i=0;i < pixmapd.pixmap.size(); i++) {
+        for(unsigned int z = 0; z < pixmapd.pixmap[0].size(); ++z) {
+            QRgb rgb = qRgb(pixmapd.pixmap[i].at(z).getRed(),pixmapd.pixmap[i].at(z).getGreen(),pixmapd.pixmap[i].at(z).getBlue());
             background.setPixel(i,z,rgb);
         }
     }
