@@ -10,6 +10,10 @@
 #define PixObject_H
 
 #include "PixObjectType.h"
+#include "Pix.h"
+#include <vector>
+
+using namespace std;
 
 /**
  * PixObject class
@@ -37,6 +41,7 @@ class PixObject {
 
     private:
         PixObjectType *pixObjectType;
+        vector<vector<Pix>> pixmap;
 };
 
 #endif // PixObject_H

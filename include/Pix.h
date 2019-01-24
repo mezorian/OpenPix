@@ -24,6 +24,9 @@ class Pix {
         Pix& operator= (const Pix& other_);
 
         /* --- getters / setters --- */
+        bool getActive() const;
+        void setActive(bool value_);
+
         unsigned int getRed() const;
         void setRed(unsigned int value_);
 
@@ -33,7 +36,10 @@ class Pix {
         unsigned int getBlue() const;
         void setBlue(unsigned int value_);
 
+
+
 private:
+        bool active = false;
         unsigned int red = 0;
         unsigned int green = 0;
         unsigned int blue = 0;
