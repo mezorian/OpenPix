@@ -1,0 +1,21 @@
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
+  - sudo apt-get update -qq
+  - pip install --user cpp-coveralls
+
+install:
+  - sudo apt-get -y install qt55[QTPACKAGE]
+
+script:
+  - source /opt/qt55/bin/qt55-env.sh
+  - cd DataCruncher
+  - /opt/qt55/bin/qmake
+  - make clean
+  - make
+  - ./DataCruncher
+
+after_success:
+  - coveralls --exclude lib --exclude tests --gcov-options '\-lp' --exclude include/catch.hpp

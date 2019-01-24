@@ -21,9 +21,14 @@ INCLUDEPATH += include/
 SOURCES += main.cpp \
     DrawnWindow.cpp \
     src/Pix.cpp \
-    src/PixMapDaemon.cpp
+    src/PixMapDaemon.cpp \
+    src/PixObject.cpp \
+    src/CrossPixObject.cpp
 
 HEADERS += \
     DrawnWindow.h \
     include/PixMapDaemon.h \
-    include/Pix.h
+    include/Pix.h \
+    include/PixObject.h \
+    include/PixObjectType.h \
+    include/CrossPixObject.h
