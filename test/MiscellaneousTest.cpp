@@ -7,9 +7,13 @@
  */
 
 #include "catch.hpp"
+#include "Pix.h"
 
 TEST_CASE("dummy test-case") {
 
+    Pix pixObject;
+    pixObject.setActive(true);
+    pixObject.setGreen(255);
     SECTION ("true") {
         REQUIRE(true==true);
     }
