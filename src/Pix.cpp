@@ -40,6 +40,16 @@ Pix& Pix::operator= (const Pix& other_) {
 }
 
 /* --- getters / setters --- */
+bool Pix::getActive() const
+{
+    return active;
+}
+
+void Pix::setActive(bool value_)
+{
+    active = value_;
+}
+
 unsigned int Pix::getRed() const
 {
     return red;
@@ -69,3 +79,5 @@ void Pix::setBlue(unsigned int value_)
 {
     blue = value_;
 }
+
+
