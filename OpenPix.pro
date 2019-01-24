@@ -5,6 +5,9 @@ TEMPLATE += app
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
+QMAKE_CXXFLAGS += --coverage
+QMAKE_LFLAGS += --coverage
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -23,7 +26,9 @@ SOURCES += main.cpp \
     src/Pix.cpp \
     src/PixMapDaemon.cpp \
     src/PixObject.cpp \
-    src/CrossPixObject.cpp
+    src/CrossPixObject.cpp \
+    main_application.cpp \
+    test/MiscellaneousTest.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -31,4 +36,5 @@ HEADERS += \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
-    include/CrossPixObject.h
+    include/CrossPixObject.h \
+    include/catch.hpp

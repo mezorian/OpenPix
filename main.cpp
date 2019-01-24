@@ -1,16 +1,11 @@
-#include <iostream>
+/**
+ * main.cpp
+ * Purpose: main test-implementation file
+ *
+ * @author Wall.Of.Death
+ * @version 2.2
+ */
 
-#include "DrawnWindow.h"
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#include "catch.hpp"
 
-using namespace std;
-
-int main(int argc, char **argv)
-{
-    QApplication app(argc, argv);
-    DrawnWindow draw;
-    draw.show();
-
-    return app.exec();
-
-
-}
