@@ -9,6 +9,11 @@
 #ifndef PixObjectType_H
 #define PixObjectType_H
 
+#include "Pix.h"
+#include "vector"
+
+using namespace std;
+
 /**
  * PixObjectType class
  * @brief The PixObjectType class is an interface which outsources functions from PixObject-class
@@ -24,7 +29,17 @@
 class PixObjectType {
     public:
         PixObjectType() {};
-        //virtual DataBuffer readSensor() = 0; TODO
+        virtual void create() = 0;
+
+        /* --- miscellaneous --- */
+        bool hasPixMap();
+        unsigned int getWidth();
+        unsigned int getHeight();
+        Pix getPix(unsigned int y_, unsigned int x_);
+
+
+        vector<vector<Pix>> pixmap;
 };
 
 #endif // PixObjectType_H
+

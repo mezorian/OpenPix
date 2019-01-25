@@ -10,8 +10,36 @@
 
 PixMapDaemon::PixMapDaemon(unsigned int width_, unsigned int height_)
 {
-    pixmap.resize(width_);
-    for(unsigned int x = 0; x < width_; x++) {
-        pixmap[x].resize(height_);
+    pixmap.resize(height_);
+    for(unsigned int y = 0; y < height_; y++) {
+        pixmap[y].resize(width_);
     }
+}
+
+void PixMapDaemon::init() {
+    PixObject dot;
+    dot.setY(5);
+    dot.setX(5);
+    dot.setPixObjectType(new DotPixObject());
+}
+
+void PixMapDaemon::run() {
+    for (int i=0; i < pixObjects.size(); i++) {
+        if (pixObjects[i].hasPixMap()) {
+            for (int y = 0; y < pixObjects[i].getHeight(); y++) {
+                for (int x = 0;  x < pixObjects[i].getWidth(); x++) {
+                    if (pixObjects[i].getPix(y,x).getActive()) {
+                        unsigned int yInPixMap = y+pixObjects[i].getY();
+                        unsigned int xInPixMap = x+pixObjects[i].getX();
+                        pixmap[yInPixMap][xInPixMap] = pixObjects[i].getPix(y,x);
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+
 }

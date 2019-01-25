@@ -26,9 +26,10 @@ SOURCES += main.cpp \
     src/Pix.cpp \
     src/PixMapDaemon.cpp \
     src/PixObject.cpp \
-    src/CrossPixObject.cpp \
     main_application.cpp \
-    test/MiscellaneousTest.cpp
+    test/MiscellaneousTest.cpp \
+    src/DotPixObject.cpp \
+    src/PixObjectType.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -36,5 +37,5 @@ HEADERS += \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
-    include/CrossPixObject.h \
-    include/catch.hpp
+    include/catch.hpp \
+    include/DotPixObject.h

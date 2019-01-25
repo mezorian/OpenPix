@@ -13,6 +13,8 @@
 #include <vector>
 // ----
 #include "Pix.h"
+#include "PixObject.h"
+#include "DotPixObject.h"
 // ----
 
 using namespace std;
@@ -20,7 +22,11 @@ using namespace std;
 class PixMapDaemon {
     public:
         PixMapDaemon(unsigned int width_,unsigned int height_);
+        void init();
+        void run();
+
         vector<vector<Pix>> pixmap;
+        vector<PixObject> pixObjects;
 
 };
 

@@ -36,12 +36,26 @@ class PixObject {
         void setPixObjectType(PixObjectType *val_) { pixObjectType = val_; };
         PixObjectType* getPixObjectType()          { return pixObjectType; };
 
-        /* --- measuring --- */
-        //DataBuffer readPixObject();
+        /* --- create --- */
+        void create();
 
-    private:
+        unsigned int getX() const;
+        void setX(unsigned int value);
+
+        unsigned int getY() const;
+        void setY(unsigned int value);
+
+        unsigned int getWidth();
+        unsigned int getHeight();
+        bool hasPixMap();
+        Pix getPix(unsigned int y_,unsigned int x_);
+
+private:
+        unsigned int x;
+        unsigned int y;
         PixObjectType *pixObjectType;
-        vector<vector<Pix>> pixmap;
+
+
 };
 
 #endif // PixObject_H
