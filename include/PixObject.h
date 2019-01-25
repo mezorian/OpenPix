@@ -52,11 +52,19 @@ class PixObject {
         Pix getPix(unsigned int y_,unsigned int x_);
         void move(int yDelta_ = 1, int xDelta_ = 1);
 
+
+        unsigned int getPixMapDaemonWidth() const;
+        void setPixMapDaemonWidth(unsigned int value);
+
+        unsigned int getPixMapDaemonHeight() const;
+        void setPixMapDaemonHeight(unsigned int value);
+
 private:
         int x;
         int y;
         PixObjectType *pixObjectType;
-
+        unsigned int pixMapDaemonWidth;
+        unsigned int pixMapDaemonHeight;
 
 };
 

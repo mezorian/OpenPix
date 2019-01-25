@@ -21,6 +21,8 @@ void PixMapDaemon::init() {
     dot.setY(5);
     dot.setX(5);
     dot.setPixObjectType(new DotPixObject());
+    dot.setPixMapDaemonHeight(pixmap.size());
+    dot.setPixMapDaemonWidth(pixmap[0].size());
     dot.create();
     pixObjects.push_back(dot);
 }
@@ -28,6 +30,7 @@ void PixMapDaemon::init() {
 void PixMapDaemon::run() {
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {
+
             pixObjects[i].move(1,1);
             for (int y = 0; y < pixObjects[i].getHeight(); y++) {
                 for (int x = 0;  x < pixObjects[i].getWidth(); x++) {
