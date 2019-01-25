@@ -9,7 +9,13 @@
 #ifndef Pix_H
 #define Pix_H
 
-
+/**
+ * Pix class
+ * @brief The Pix class represents the smallest possible unit in OpenPix
+ * The Pix class represents the smallest possible unit in OpenPix.
+ * It can have several properties / member variables to describe how this unit
+ * has to get displayed on different output-devices.
+ */
 class Pix {
     public:
         /* --- constructors / destructors --- */
@@ -36,9 +42,7 @@ class Pix {
         unsigned int getBlue() const;
         void setBlue(unsigned int value_);
 
-
-
-private:
+    private:
         bool active = false;
         unsigned int red = 0;
         unsigned int green = 0;
