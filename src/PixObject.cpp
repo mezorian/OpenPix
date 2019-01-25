@@ -41,15 +41,26 @@ void PixObject::setY(unsigned int value)
 }
 
 unsigned int PixObject::getWidth() {
-    pixObjectType->getWidth();
+    return pixObjectType->getWidth();
 }
 
 unsigned int PixObject::getHeight() {
-    pixObjectType->getHeight();
+    return pixObjectType->getHeight();
 }
 
 Pix PixObject::getPix(unsigned int y_, unsigned int x_){
     return pixObjectType->getPix(y_,x_);
+}
+
+void PixObject::move(int yDelta_, int xDelta_) {
+    setY(getY()+yDelta_);
+    setX(getX()+xDelta_);
+    //if ( (getX()+1 < 0) || (getX()+1 > getWidth()) ) {
+    //    setX(rand()%getWidth());
+    //}
+    //if ( (getY()+1 < 0) || (getY()+1 > getHeight()) ) {
+    //    setY(rand()%getHeight());
+    //}
 }
 
 bool PixObject::hasPixMap() {

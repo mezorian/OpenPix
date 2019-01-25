@@ -9,8 +9,7 @@
 #include "DotPixObject.h"
 
 void DotPixObject::create() {
-    Pix p(255,0,0);
-    p.setActive(true);
+    Pix p(true,255,0,0);
     pixmap.resize(1);
     pixmap[0].resize(1);
     pixmap[0][0] = p;

@@ -12,6 +12,7 @@
 #include "PixObjectType.h"
 #include "Pix.h"
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -49,10 +50,11 @@ class PixObject {
         unsigned int getHeight();
         bool hasPixMap();
         Pix getPix(unsigned int y_,unsigned int x_);
+        void move(int yDelta_ = 1, int xDelta_ = 1);
 
 private:
-        unsigned int x;
-        unsigned int y;
+        int x;
+        int y;
         PixObjectType *pixObjectType;
 
 

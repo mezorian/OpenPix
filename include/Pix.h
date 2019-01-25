@@ -15,7 +15,7 @@ class Pix {
         /* --- constructors / destructors --- */
 
         // standard - constructor
-        Pix(unsigned int red_=0, unsigned int green_=0, unsigned int blue_=0);
+        Pix(bool active_ = false, unsigned int red_=0, unsigned int green_=0, unsigned int blue_=0);
 
         // copy - constructor
         Pix(const Pix& other_);

@@ -15,12 +15,15 @@ bool PixObjectType::hasPixMap() {
 
 unsigned int PixObjectType::getWidth() {
     if (hasPixMap()) {
-        return pixmap[0].size();
+        unsigned int i = pixmap[0].size();
+        return i;
     }
 }
 
 unsigned int PixObjectType::getHeight() {
-    return pixmap.size();
+    unsigned int i = pixmap.size();
+    return i;
+
 }
 
 Pix PixObjectType::getPix(unsigned int y_, unsigned int x_) {

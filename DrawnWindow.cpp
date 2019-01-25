@@ -3,6 +3,7 @@
 DrawnWindow::DrawnWindow(QWidget *parent) :
     QMainWindow(parent)
 {
+    pixmapd.init();
     setGeometry(0,0,800,600);
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(repaint()));
@@ -10,16 +11,16 @@ DrawnWindow::DrawnWindow(QWidget *parent) :
 }
 
 void DrawnWindow::paintEvent(QPaintEvent *) {
-    int imagewidth = 10;
-    int imageheight = 15;
-    int scaledimagewidth = 200;
-    int scaledimageheight = 400;
+    pixmapd.run();
+    int imagewidth = 15;
+    int imageheight = 10;
+    int scaledimagewidth = 300;
+    int scaledimageheight = 200;
     QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
-    pixmapd.pixmap[5].at(5).setRed(rand()%255);
-    for(unsigned int i=0;i < pixmapd.pixmap.size(); i++) {
-        for(unsigned int z = 0; z < pixmapd.pixmap[0].size(); ++z) {
-            QRgb rgb = qRgb(pixmapd.pixmap[i].at(z).getRed(),pixmapd.pixmap[i].at(z).getGreen(),pixmapd.pixmap[i].at(z).getBlue());
-            background.setPixel(i,z,rgb);
+    for(unsigned int y=0; y < pixmapd.pixmap.size(); y++) {
+        for(unsigned int x = 0; x < pixmapd.pixmap[0].size(); x++) {
+            QRgb rgb = qRgb(pixmapd.pixmap[y].at(x).getRed(),pixmapd.pixmap[y].at(x).getGreen(),pixmapd.pixmap[y].at(x).getBlue());
+            background.setPixel(y,x,rgb);
         }
     }
     QImage scaledImage = background.scaled(scaledimagewidth, scaledimageheight,Qt::KeepAspectRatio);

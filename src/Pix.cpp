@@ -11,7 +11,8 @@
 /* --- constructors / destructors --- */
 
 // standard - constructor
-Pix::Pix(unsigned int red_, unsigned int green_, unsigned int blue_) {
+Pix::Pix(bool active_, unsigned int red_, unsigned int green_, unsigned int blue_) {
+    setActive(active_);
     setRed(red_);
     setGreen(green_);
     setBlue(blue_);
@@ -31,6 +32,7 @@ Pix& Pix::operator= (const Pix& other_) {
     }
 
     // copy attributes
+    setActive(other_.getActive());
     setRed(other_.getRed());
     setGreen(other_.getGreen());
     setBlue(other_.getBlue());
