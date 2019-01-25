@@ -30,6 +30,17 @@ void PixMapDaemon::init() {
 void PixMapDaemon::run() {
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {
+            // unpaint
+            for (int y = 0; y < pixObjects[i].getHeight(); y++) {
+                for (int x = 0;  x < pixObjects[i].getWidth(); x++) {
+                    if (pixObjects[i].getPix(y,x).getActive()) {
+                        unsigned int yInPixMap = y+pixObjects[i].getY();
+                        unsigned int xInPixMap = x+pixObjects[i].getX();
+                        Pix emptyPix();
+                        pixmap[yInPixMap][xInPixMap] = emptyPix;
+                    }
+                }
+            }
 
             pixObjects[i].move(1,1);
             for (int y = 0; y < pixObjects[i].getHeight(); y++) {
