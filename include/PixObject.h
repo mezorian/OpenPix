@@ -9,10 +9,13 @@
 #ifndef PixObject_H
 #define PixObject_H
 
-#include "PixObjectType.h"
-#include "Pix.h"
+// ---
 #include <vector>
 #include <cstdlib>
+// ---
+#include "PixObjectType.h"
+#include "Pix.h"
+// ---
 
 using namespace std;
 
@@ -33,38 +36,38 @@ class PixObject {
         /* --- constructor --- */
         PixObject() {};
 
-        /* --- getter and setter --- */
-        void setPixObjectType(PixObjectType *val_) { pixObjectType = val_; };
-        PixObjectType* getPixObjectType()          { return pixObjectType; };
-
-        /* --- create --- */
+        /* --- functions which are implemented by pixObjectType --- */
         void create();
-
-        unsigned int getX() const;
-        void setX(unsigned int value);
-
-        unsigned int getY() const;
-        void setY(unsigned int value);
+        void move(int yDelta_ = 1, int xDelta_ = 1);
 
         unsigned int getWidth();
         unsigned int getHeight();
-        bool hasPixMap();
-        Pix getPix(unsigned int y_,unsigned int x_);
-        void move(int yDelta_ = 1, int xDelta_ = 1);
 
+        Pix getPix(unsigned int y_,unsigned int x_);
+        bool hasPixMap();
+
+        /* --- getter and setter --- */
+        PixObjectType *getPixObjectType() const;
+        void setPixObjectType(PixObjectType *value_);
+
+        unsigned int getX() const;
+        void setX(unsigned int value_);
+
+        unsigned int getY() const;
+        void setY(unsigned int value_);
 
         unsigned int getPixMapDaemonWidth() const;
-        void setPixMapDaemonWidth(unsigned int value);
+        void setPixMapDaemonWidth(unsigned int value_);
 
         unsigned int getPixMapDaemonHeight() const;
-        void setPixMapDaemonHeight(unsigned int value);
+        void setPixMapDaemonHeight(unsigned int value_);
 
 private:
-        int x;
-        int y;
         PixObjectType *pixObjectType;
-        unsigned int pixMapDaemonWidth;
-        unsigned int pixMapDaemonHeight;
+        int x; // x-coordinate of upper-left Pix
+        int y; // y-coordinate of upper-left Pix
+        unsigned int pixMapDaemonWidth;  // TODO : search for a better solution
+        unsigned int pixMapDaemonHeight; // than this in a later version
 
 };
 

@@ -8,53 +8,33 @@
 
 #include "PixObject.h"
 
+/* --- functions which are implemented by pixObjectType --- */
 /**
  * PixObject::create
- * @brief create() create the PixObject with its PixMap inside
+ * @brief create() creates the PixObject with its PixMap inside
  *
- * create() create the PixObject with its PixMap inside.
- * In practice create does not really create the PixObject, but it delegates the
- * create to the implementation of a PixObjectType-interface
+ * Creates the PixObject with its PixMap inside.
+ * In practice create() does not really create the PixObject, but it delegates the
+ * creation to the implementation of a PixObjectType-interface
  */
 void PixObject::create() {
     pixObjectType->create();
 }
 
-unsigned int PixObject::getX() const
-{
-    return x;
-}
-
-void PixObject::setX(unsigned int value)
-{
-    x = value;
-}
-
-unsigned int PixObject::getY() const
-{
-    return y;
-}
-
-void PixObject::setY(unsigned int value)
-{
-    y = value;
-}
-
-unsigned int PixObject::getWidth() {
-    return pixObjectType->getWidth();
-}
-
-unsigned int PixObject::getHeight() {
-    return pixObjectType->getHeight();
-}
-
-Pix PixObject::getPix(unsigned int y_, unsigned int x_){
-    return pixObjectType->getPix(y_,x_);
-}
-
+/**
+ * PixObject::move
+ * @brief moves the PixObject by changing the x and y member variables
+ * @param yDelta_ value by which the y-coordinate of this PixObject hast to get changed
+ * @param xDelta_ value by which the x-coordinate of this PixObject hast to get changed
+ *
+ * If the new coordinates, which were calculated by this function, are out of the possible coordinates
+ * of the pixmap of the PixMapDaemon they get corrected to random coordinates within the possible coordinates
+ */
 void PixObject::move(int yDelta_, int xDelta_) {
+    // calculate new coordinates
     setY(getY()+yDelta_);
     setX(getX()+xDelta_);
+    // check and correct coordinates
     if ( (getX()+1 < 0) || (getX()+1 > getPixMapDaemonWidth()) ) {
         setX(rand()%getWidth());
     }
@@ -63,26 +43,142 @@ void PixObject::move(int yDelta_, int xDelta_) {
     }
 }
 
-unsigned int PixObject::getPixMapDaemonWidth() const
-{
-    return pixMapDaemonWidth;
+/**
+ * PixObject::getWidth
+ * @brief returns the width of the pixmap of the pixObjectType
+ * @return returns the width of the pixmap of the pixObjectType
+ */
+unsigned int PixObject::getWidth() {
+    return pixObjectType->getWidth();
 }
 
-void PixObject::setPixMapDaemonWidth(unsigned int value)
-{
-    pixMapDaemonWidth = value;
+/**
+ * PixObject::getHeight
+ * @brief returns the height of the pixmap of the pixObjectType
+ * @return returns the height of the pixmap of the pixObjectType
+ */
+unsigned int PixObject::getHeight() {
+    return pixObjectType->getHeight();
 }
 
-unsigned int PixObject::getPixMapDaemonHeight() const
-{
-    return pixMapDaemonHeight;
+/**
+ * PixObject::getPix
+ * @brief returns a copy of a single Pix-Object within the pixmap of the pixObjectType
+ * @param y_ y-coordinate within (the pixmap of the pixObjectType) of the Pix which is to return
+ * @param x_ x-coordinate within (the pixmap of the pixObjectType) of the Pix which is to return
+ * @return a copy of a single Pix-Object within the pixmap of the pixObjectType
+ *
+ * Returns a copy of a single Pix-Object within the pixmap of the pixObjectType.
+ * This function can get used for getting the Pix-informations while painting.
+ * TODO : Search a better solution for this in future releases
+ */
+Pix PixObject::getPix(unsigned int y_, unsigned int x_){
+    return pixObjectType->getPix(y_,x_);
 }
 
-void PixObject::setPixMapDaemonHeight(unsigned int value)
-{
-    pixMapDaemonHeight = value;
-}
-
+/**
+ * PixObject::hasPixMap
+ * @brief This function provides information about if the pixmap within the pixObjectType is empty or not
+ * @return returns false if the pixmap of the pixObjectType is empty, otherwise true
+ */
 bool PixObject::hasPixMap() {
     pixObjectType->hasPixMap();
 }
+
+/* --- getter and setter --- */
+/**
+ * PixObject::getPixObjectType
+ * @brief getter of the member variable pixObjectType
+ * @return returns member variable pixObjectType
+ *
+ * Getter of the member variable pixObjectType.
+ * The member variable pixObjectType stores a reference to the strategy-class PixObjectType
+ */
+PixObjectType *PixObject::getPixObjectType() const {
+    return pixObjectType;
+}
+
+/**
+ * PixObject::setPixObjectType
+ * @brief setter of the member variable pixObjectType
+ * @param value pixObjectType which has to get stored
+ *
+ * Setter of the member variable pixObjectType.
+ * The member variable pixObjectType stores a reference to the strategy-class PixObjectType
+ */
+void PixObject::setPixObjectType(PixObjectType *value_) {
+    pixObjectType = value_;
+}
+
+/**
+ * PixObject::getX
+ * @brief getter of the member-variable x
+ * @return the current value of the member-variable x, which is the x-coordinate of upper-left Pix
+ */
+unsigned int PixObject::getX() const {
+    return x;
+}
+
+/**
+ * PixObject::setX
+ * @brief setter of the member-variable x
+ * @param value the new value for the member-variable x, which is the x-coordinate of upper-left Pix
+ */
+void PixObject::setX(unsigned int value_) {
+    x = value_;
+}
+
+/**
+ * PixObject::getY
+ * @brief getter of the member-variable y
+ * @return the current value of the member-variable y, which is the y-coordinate of upper-left Pix
+ */
+unsigned int PixObject::getY() const {
+    return y;
+}
+
+/**
+ * PixObject::setY
+ * @brief setter of the member-variable y
+ * @param value the new value for the member-variable y, which is the y-coordinate of upper-left Pix
+ */
+void PixObject::setY(unsigned int value_) {
+    y = value_;
+}
+
+/**
+ * PixObject::getPixMapDaemonWidth
+ * @brief getter of the member-variable pixMapDaemonWidth
+ * @return the current value of the member-variable pixMapDaemonWidth
+ */
+unsigned int PixObject::getPixMapDaemonWidth() const {
+    return pixMapDaemonWidth;
+}
+
+/**
+ * PixObject::setPixMapDaemonWidth
+ * @brief setter of the member-variable pixMapDaemonWidth
+ * @param value the new value for the member-variable pixMapDaemonWidth
+ */
+void PixObject::setPixMapDaemonWidth(unsigned int value_) {
+    pixMapDaemonWidth = value_;
+}
+
+/**
+ * PixObject::getPixMapDaemonHeight
+ * @brief getter of the member-variable pixMapDaemonHeight
+ * @return the current value of the member-variable pixMapDaemonHeight
+ */
+unsigned int PixObject::getPixMapDaemonHeight() const {
+    return pixMapDaemonHeight;
+}
+
+/**
+ * PixObject::setPixMapDaemonWidth
+ * @brief setter of the member-variable pixMapDaemonWidth
+ * @param value the new value for the member-variable pixMapDaemonWidth
+ */
+void PixObject::setPixMapDaemonHeight(unsigned int value_) {
+    pixMapDaemonHeight = value_;
+}
+

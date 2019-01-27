@@ -28,15 +28,18 @@ using namespace std;
  */
 class PixObjectType {
     public:
+        /* --- constructors --- */
         PixObjectType() {};
+
+        /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void create() = 0;
 
         /* --- miscellaneous --- */
-        bool hasPixMap();
         unsigned int getWidth();
         unsigned int getHeight();
-        Pix getPix(unsigned int y_, unsigned int x_);
 
+        bool hasPixMap();
+        Pix getPix(unsigned int y_, unsigned int x_);
 
         vector<vector<Pix>> pixmap;
 };
