@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     test/MiscellaneousTest.cpp \
     src/DotPixObject.cpp \
     src/PixObjectType.cpp \
-    test/PixTest.cpp
+    test/PixTest.cpp \
+    test/PixObjectTest.cpp
 
 HEADERS += \
     DrawnWindow.h \
