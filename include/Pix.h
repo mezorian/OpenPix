@@ -34,13 +34,13 @@ class Pix {
         void setActive(bool value_);
 
         unsigned int getRed() const;
-        void setRed(unsigned int value_);
+        void setRed(int value_);
 
         unsigned int getGreen() const;
-        void setGreen(unsigned int value_);
+        void setGreen(int value_);
 
         unsigned int getBlue() const;
-        void setBlue(unsigned int value_);
+        void setBlue(int value_);
 
     private:
         bool active = false;

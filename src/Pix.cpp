@@ -96,7 +96,12 @@ unsigned int Pix::getRed() const {
  * @brief setter of member-variable red
  * @param value_ The red part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-void Pix::setRed(unsigned int value_) {
+void Pix::setRed(int value_) {
+    if (value_ > 255) {
+        value_ = 255;
+    } else if (value_ < 0) {
+        value_ = 0;
+    }
     red = value_;
 }
 
@@ -114,7 +119,12 @@ unsigned int Pix::getGreen() const {
  * @brief setter of member-variable green
  * @param value_ The green part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-void Pix::setGreen(unsigned int value_) {
+void Pix::setGreen(int value_) {
+    if (value_ > 255) {
+        value_ = 255;
+    } else if (value_ < 0) {
+        value_ = 0;
+    }
     green = value_;
 }
 
@@ -132,6 +142,11 @@ unsigned int Pix::getBlue() const {
  * @brief setter of member-variable blue
  * @param value_ The blue part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-void Pix::setBlue(unsigned int value_) {
+void Pix::setBlue(int value_) {
+    if (value_ > 255) {
+        value_ = 255;
+    } else if (value_ < 0) {
+        value_ = 0;
+    }
     blue = value_;
 }
