@@ -1,4 +1,4 @@
-/**
+ /**
  * PixMapOutputDriverType.h
  * Purpose: defines interface PixMapOutputDriverType
  *
@@ -9,7 +9,9 @@
 #ifndef PixMapOutputDriverType_H
 #define PixMapOutputDriverType_H
 
-#include "vector"
+#include <vector>
+// ---
+#include "Pix.h"
 
 using namespace std;
 
@@ -28,11 +30,17 @@ using namespace std;
 class PixMapOutputDriverType {
     public:
         /* --- constructors --- */
-        PixMapOutputDriverType() {};
+    PixMapOutputDriverType() {};
 
         /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void init() = 0;
         virtual void paint() = 0;
+
+        vector<vector<Pix> > *getPixmap() const;
+        void setPixmap(vector<vector<Pix> > *value);
+
+protected:
+        vector<vector<Pix>> *pixmap;
 };
 
 #endif // PixMapOutputDriverType_H

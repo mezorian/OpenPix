@@ -27,3 +27,7 @@ PixMapOutputDriverType *PixMapOutputDriver::getPixMapOutputDriverType() const {
 void PixMapOutputDriver::setPixMapOutputDriverType(PixMapOutputDriverType *value_) {
     pixMapOutputDriverType = value_;
 }
+
+void PixMapOutputDriver::setPixmap(vector<vector<Pix> > *value_) {
+    pixMapOutputDriverType->setPixmap(value_);
+}

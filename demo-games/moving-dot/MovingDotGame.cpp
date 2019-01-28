@@ -7,9 +7,10 @@
  */
 
 #include "MovingDotGame.h"
+#include "QTUIOutputDriver.h"
 
 MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_) :
-    OpenPixGameEngine(width_,height_)
+    OpenPixGameEngine(width_,height_,new QTUIOutputDriver())
 {
 
 }
@@ -35,9 +36,11 @@ void MovingDotGame::init() {
     dot4.setY(6);
     dot4.setX(8);
     pixObjects.push_back(dot4);
+    pixMapOutputDriver.init();
 }
 
 void MovingDotGame::run() {
+    pixMapOutputDriver.paint();
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {
             // unpaint

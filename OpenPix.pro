@@ -21,6 +21,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 INCLUDEPATH += include/
 INCLUDEPATH += demo-games/moving-dot/
+INCLUDEPATH += output-driver/
 
 SOURCES += main.cpp \
     main_application.cpp \
@@ -36,7 +37,8 @@ SOURCES += main.cpp \
     demo-games/moving-dot/MovingDotGame.cpp \
     output-driver/PixMapOutputDriver.cpp \
     output-driver/QTUIOutputDriver.cpp \
-    output-driver/PixMapOutputDriverType.cpp
+    output-driver/PixMapOutputDriverType.cpp \
+    output-driver/QTUIWindow.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -50,4 +52,5 @@ HEADERS += \
     demo-games/moving-dot/MovingDotGame.h \
     output-driver/PixMapOutputDriver.h \
     output-driver/QTUIOutputDriver.h \
-    output-driver/PixMapOutputDriverType.h
+    output-driver/PixMapOutputDriverType.h \
+    output-driver/QTUIWindow.h

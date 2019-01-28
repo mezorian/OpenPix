@@ -15,7 +15,17 @@
 
 using namespace std;
 
+// ---
+#include <QApplication>
+#include <QMainWindow>
+#include <QtWidgets>
+#include <QPainter>
+#include <QImage>
+#include <QTimer>
+// ---
 #include "PixMapOutputDriverType.h"
+#include "QTUIWindow.h"
+// ---
 
 /**
  * QTUIOutputDriver class
@@ -24,7 +34,7 @@ using namespace std;
  * The design of it is based on the design pattern 'strategy'.
  * In respect of this the QTUIOutputDriver-class is a so called 'ConcreteStrategy' within the Strategy-Pattern.
  */
-class QTUIOutputDriver : public PixObjectType {
+class QTUIOutputDriver : public PixMapOutputDriverType {
     public:
         /* --- constructor --- */
         QTUIOutputDriver() {};
@@ -34,6 +44,8 @@ class QTUIOutputDriver : public PixObjectType {
         void paint();
 
     private:
+        QTUIWindow ui;
+
 
 };
 

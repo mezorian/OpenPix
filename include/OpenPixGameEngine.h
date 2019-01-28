@@ -14,19 +14,23 @@
 // ----
 #include "Pix.h"
 #include "PixObject.h"
-#include "demo-games/moving-dot/DotPixObject.h"
+#include "DotPixObject.h"
+#include "PixMapOutputDriver.h"
+#include "PixMapOutputDriverType.h"
 // ----
 
 using namespace std;
 
 class OpenPixGameEngine {
     public:
-        OpenPixGameEngine(unsigned int width_,unsigned int height_);
+        OpenPixGameEngine(unsigned int width_,unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_);
         virtual void init() = 0;
         virtual void run() = 0;
+        void paint();
 
         vector<vector<Pix>> pixmap;
         vector<PixObject> pixObjects;
+        PixMapOutputDriver pixMapOutputDriver;
 
 };
 

@@ -6,6 +6,15 @@
  * @version 0.1
  */
 
-#include "DotPixObject.h"
+#include "QTUIOutputDriver.h"
 
 
+void QTUIOutputDriver::init()
+{
+    ui.setPixmap(pixmap); ;
+}
+
+void QTUIOutputDriver::paint()
+{
+    ui.show();
+}
