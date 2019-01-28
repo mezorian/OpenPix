@@ -24,20 +24,20 @@ INCLUDEPATH += include/
 SOURCES += main.cpp \
     DrawnWindow.cpp \
     src/Pix.cpp \
-    src/PixMapDaemon.cpp \
     src/PixObject.cpp \
     main_application.cpp \
     test/MiscellaneousTest.cpp \
     src/DotPixObject.cpp \
     src/PixObjectType.cpp \
     test/PixTest.cpp \
-    test/PixObjectTest.cpp
+    test/PixObjectTest.cpp \
+    src/OpenPixGameEngine.cpp
 
 HEADERS += \
     DrawnWindow.h \
-    include/PixMapDaemon.h \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
     include/catch.hpp \
-    include/DotPixObject.h
+    include/DotPixObject.h \
+    include/OpenPixGameEngine.h

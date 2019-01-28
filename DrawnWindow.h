@@ -8,7 +8,7 @@
 #include <QImage>
 #include <QTimer>
 // ---
-#include "PixMapDaemon.h"
+#include "OpenPixGameEngine.h"
 
 class DrawnWindow : public QMainWindow {
     Q_OBJECT
@@ -18,7 +18,7 @@ public:
 
 private:
     QTimer *timer;
-    PixMapDaemon pixmapd = PixMapDaemon(10,15);
+    OpenPixGameEngine engine = OpenPixGameEngine(10,15);
 };
 
 #endif // TEST_H

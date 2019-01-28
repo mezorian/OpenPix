@@ -1,13 +1,13 @@
 /**
- * PixMapDaemon.h
- * Purpose: defines class PixMapDaemon
+ * OpenPixGameEngine.h
+ * Purpose: defines class OpenPixGameEngine
  *
  * @author mezorian
  * @version 0.1
  */
 
-#ifndef PIXMAPDAEMON_H
-#define PIXMAPDAEMON_H
+#ifndef OpenPixGameEngine_H
+#define OpenPixGameEngine_H
 
 // ----
 #include <vector>
@@ -19,9 +19,9 @@
 
 using namespace std;
 
-class PixMapDaemon {
+class OpenPixGameEngine {
     public:
-        PixMapDaemon(unsigned int width_,unsigned int height_);
+        OpenPixGameEngine(unsigned int width_,unsigned int height_);
         void init();
         void run();
 
@@ -30,4 +30,4 @@ class PixMapDaemon {
 
 };
 
-#endif // PIXMAPDAEMON_H
+#endif // OpenPixGameEngine_H

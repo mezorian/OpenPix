@@ -56,18 +56,18 @@ class PixObject {
         unsigned int getY() const;
         void setY(unsigned int value_);
 
-        unsigned int getPixMapDaemonWidth() const;
-        void setPixMapDaemonWidth(unsigned int value_);
+        unsigned int getGameEngineWidth() const;
+        void setGameEngineWidth(unsigned int value_);
 
-        unsigned int getPixMapDaemonHeight() const;
-        void setPixMapDaemonHeight(unsigned int value_);
+        unsigned int getGameEngineHeight() const;
+        void setGameEngineHeight(unsigned int value_);
 
 private:
         PixObjectType *pixObjectType;
         int x; // x-coordinate of upper-left Pix
         int y; // y-coordinate of upper-left Pix
-        unsigned int pixMapDaemonWidth;  // TODO : search for a better solution
-        unsigned int pixMapDaemonHeight; // than this in a later version
+        unsigned int gameEngineWidth;  // TODO : search for a better solution
+        unsigned int gameEngineHeight; // than this in a later version
 
 };
 

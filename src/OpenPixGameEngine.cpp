@@ -1,14 +1,14 @@
 /**
- * PixMapDaemon.cpp
- * Purpose: implements class PixMapDaemon
+ * OpenPixGameEngine.cpp
+ * Purpose: implements class OpenPixGameEngine
  *
  * @author mezorian
  * @version 0.1s
  */
 
-#include "PixMapDaemon.h"
+#include "OpenPixGameEngine.h"
 
-PixMapDaemon::PixMapDaemon(unsigned int width_, unsigned int height_)
+OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_)
 {
     pixmap.resize(height_);
     for(unsigned int y = 0; y < height_; y++) {
@@ -16,13 +16,13 @@ PixMapDaemon::PixMapDaemon(unsigned int width_, unsigned int height_)
     }
 }
 
-void PixMapDaemon::init() {
+void OpenPixGameEngine::init() {
     PixObject dot;
     dot.setY(5);
     dot.setX(5);
     dot.setPixObjectType(new DotPixObject());
-    dot.setPixMapDaemonHeight(pixmap.size());
-    dot.setPixMapDaemonWidth(pixmap[0].size());
+    dot.setGameEngineHeight(pixmap.size());
+    dot.setGameEngineWidth(pixmap[0].size());
     dot.create();
     pixObjects.push_back(dot);
     PixObject dot2 = dot;
@@ -39,7 +39,7 @@ void PixMapDaemon::init() {
     pixObjects.push_back(dot4);
 }
 
-void PixMapDaemon::run() {
+void OpenPixGameEngine::run() {
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {
             // unpaint
