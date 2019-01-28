@@ -14,7 +14,7 @@
 // ----
 #include "Pix.h"
 #include "PixObject.h"
-#include "DotPixObject.h"
+#include "demo-games/moving-dot/DotPixObject.h"
 // ----
 
 using namespace std;

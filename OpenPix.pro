@@ -22,16 +22,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 INCLUDEPATH += include/
 
 SOURCES += main.cpp \
+    main_application.cpp \
     DrawnWindow.cpp \
     src/Pix.cpp \
     src/PixObject.cpp \
-    main_application.cpp \
-    test/MiscellaneousTest.cpp \
-    src/DotPixObject.cpp \
     src/PixObjectType.cpp \
+    src/OpenPixGameEngine.cpp \
+    test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
     test/PixObjectTest.cpp \
-    src/OpenPixGameEngine.cpp
+    demo-games/moving-dot/DotPixObject.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -39,5 +39,5 @@ HEADERS += \
     include/PixObject.h \
     include/PixObjectType.h \
     include/catch.hpp \
-    include/DotPixObject.h \
-    include/OpenPixGameEngine.h
+    include/OpenPixGameEngine.h \
+    demo-games/moving-dot/DotPixObject.h
