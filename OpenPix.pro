@@ -33,7 +33,10 @@ SOURCES += main.cpp \
     test/PixTest.cpp \
     test/PixObjectTest.cpp \
     demo-games/moving-dot/DotPixObject.cpp \
-    demo-games/moving-dot/MovingDotGame.cpp
+    demo-games/moving-dot/MovingDotGame.cpp \
+    output-driver/PixMapOutputDriver.cpp \
+    output-driver/QTUIOutputDriver.cpp \
+    output-driver/PixMapOutputDriverType.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -42,6 +45,9 @@ HEADERS += \
     include/PixObjectType.h \
     include/catch.hpp \
     include/OpenPixGameEngine.h \
-    demo-games/moving-dot/DotPixObject.h \
     include/MovingDotGame.h \
-    demo-games/moving-dot/MovingDotGame.h
+    demo-games/moving-dot/DotPixObject.h \
+    demo-games/moving-dot/MovingDotGame.h \
+    output-driver/PixMapOutputDriver.h \
+    output-driver/QTUIOutputDriver.h \
+    output-driver/PixMapOutputDriverType.h
