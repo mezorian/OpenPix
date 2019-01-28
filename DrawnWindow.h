@@ -8,7 +8,7 @@
 #include <QImage>
 #include <QTimer>
 // ---
-#include "OpenPixGameEngine.h"
+#include "MovingDotGame.h"
 
 class DrawnWindow : public QMainWindow {
     Q_OBJECT
@@ -18,7 +18,7 @@ public:
 
 private:
     QTimer *timer;
-    OpenPixGameEngine engine = OpenPixGameEngine(10,15);
+    MovingDotGame engine = MovingDotGame(10,15);
 };
 
 #endif // TEST_H

@@ -20,6 +20,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 INCLUDEPATH += include/
+INCLUDEPATH += demo-games/moving-dot/
 
 SOURCES += main.cpp \
     main_application.cpp \
@@ -31,7 +32,8 @@ SOURCES += main.cpp \
     test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
     test/PixObjectTest.cpp \
-    demo-games/moving-dot/DotPixObject.cpp
+    demo-games/moving-dot/DotPixObject.cpp \
+    demo-games/moving-dot/MovingDotGame.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -40,4 +42,6 @@ HEADERS += \
     include/PixObjectType.h \
     include/catch.hpp \
     include/OpenPixGameEngine.h \
-    demo-games/moving-dot/DotPixObject.h
+    demo-games/moving-dot/DotPixObject.h \
+    include/MovingDotGame.h \
+    demo-games/moving-dot/MovingDotGame.h

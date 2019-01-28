@@ -22,8 +22,8 @@ using namespace std;
 class OpenPixGameEngine {
     public:
         OpenPixGameEngine(unsigned int width_,unsigned int height_);
-        void init();
-        void run();
+        virtual void init() = 0;
+        virtual void run() = 0;
 
         vector<vector<Pix>> pixmap;
         vector<PixObject> pixObjects;
