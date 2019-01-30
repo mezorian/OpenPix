@@ -6,8 +6,6 @@
 #include "QTUIWindow.h"
 #include "MovingDotGame.h"
 
-#include "TestDriver.h"
-
 using namespace std;
 
 int main(int argc, char **argv)
@@ -18,6 +16,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     MovingDotGame game(10,15);
     game.init();
+
     /*auto start = std::chrono::high_resolution_clock::now();
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = finish - start;
