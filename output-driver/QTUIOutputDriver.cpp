@@ -11,12 +11,12 @@
 
 void QTUIOutputDriver::init()
 {
-    ui.setPixmap(pixmap); ;
+    //ui.setPixmap(pixmap); ;
 }
 
 void QTUIOutputDriver::paint()
 {
-    ui.show();
+    //ui.show();
 }
 
 void QTUIOutputDriver::doSmth()

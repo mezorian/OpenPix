@@ -42,13 +42,13 @@ class QTUIOutputDriver : public PixMapOutputDriverType {
         /* --- functions which were to implement --- */
         void init();
         void paint();
-        DrawnWindow draw;
+        //DrawnWindow draw;
 
 
         void doSmth();
 
     private:
-        QTUIWindow ui;
+        QTUIWindow draw;
 
 
 };

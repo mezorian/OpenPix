@@ -16,10 +16,16 @@ void QTUIWindow::paintEvent(QPaintEvent *) {
     int scaledimagewidth = 300;
     int scaledimageheight = 200;
     QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
-    for(unsigned int y=0; y < (*pixmap).size(); y++) {
+ /*   for(unsigned int y=0; y < (*pixmap).size(); y++) {
         for(unsigned int x = 0; x < (*pixmap)[0].size(); x++) {
             QRgb rgb = qRgb((*pixmap)[y].at(x).getRed(),(*pixmap)[y].at(x).getGreen(),(*pixmap)[y].at(x).getBlue());
             background.setPixel(y,x,rgb);
+        }
+    }*/
+    for(unsigned int y=0; y < imageheight; y++) {
+        for(unsigned int x = 0; x < imagewidth; x++) {
+            QRgb rgb = qRgb(rand()%255,0,0);
+            background.setPixel(x,y,rgb);
         }
     }
     QImage scaledImage = background.scaled(scaledimagewidth, scaledimageheight,Qt::KeepAspectRatio);

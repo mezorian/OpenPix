@@ -25,7 +25,6 @@ INCLUDEPATH += output-driver/
 
 SOURCES += main.cpp \
     main_application.cpp \
-    DrawnWindow.cpp \
     src/Pix.cpp \
     src/PixObject.cpp \
     src/PixObjectType.cpp \
@@ -42,7 +41,6 @@ SOURCES += main.cpp \
     output-driver/TestDriver.cpp
 
 HEADERS += \
-    DrawnWindow.h \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
