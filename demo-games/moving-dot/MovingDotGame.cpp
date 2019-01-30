@@ -37,6 +37,7 @@ void MovingDotGame::init() {
     dot4.setX(8);
     pixObjects.push_back(dot4);
     pixMapOutputDriver.init();
+    doSmth();
 }
 
 void MovingDotGame::run() {
@@ -71,3 +72,10 @@ void MovingDotGame::run() {
 
 
 }
+
+void MovingDotGame::doSmth()
+{
+    pixMapOutputDriver.doSmth();
+}
+
+

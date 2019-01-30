@@ -8,7 +8,6 @@
 #include <QImage>
 #include <QTimer>
 // ---
-#include "MovingDotGame.h"
 
 class DrawnWindow : public QMainWindow {
     Q_OBJECT

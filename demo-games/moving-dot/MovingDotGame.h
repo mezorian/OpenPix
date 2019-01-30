@@ -17,6 +17,7 @@
 #include "PixObject.h"
 #include "DotPixObject.h"
 #include "OpenPixGameEngine.h"
+#include "../../DrawnWindow.h"
 // ----
 
 using namespace std;
@@ -26,7 +27,9 @@ class MovingDotGame : public OpenPixGameEngine {
         MovingDotGame(unsigned int width_,unsigned int height_);
         void init();
         void run();
-        void run2();
+
+        void doSmth();
+
 
 };
 

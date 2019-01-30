@@ -38,7 +38,8 @@ SOURCES += main.cpp \
     output-driver/PixMapOutputDriver.cpp \
     output-driver/QTUIOutputDriver.cpp \
     output-driver/PixMapOutputDriverType.cpp \
-    output-driver/QTUIWindow.cpp
+    output-driver/QTUIWindow.cpp \
+    output-driver/TestDriver.cpp
 
 HEADERS += \
     DrawnWindow.h \
@@ -53,4 +54,5 @@ HEADERS += \
     output-driver/PixMapOutputDriver.h \
     output-driver/QTUIOutputDriver.h \
     output-driver/PixMapOutputDriverType.h \
-    output-driver/QTUIWindow.h
+    output-driver/QTUIWindow.h \
+    output-driver/TestDriver.h

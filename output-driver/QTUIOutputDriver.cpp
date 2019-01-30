@@ -18,3 +18,9 @@ void QTUIOutputDriver::paint()
 {
     ui.show();
 }
+
+void QTUIOutputDriver::doSmth()
+{
+    std::cout << "Hello World" << std::endl;
+    draw.show();
+}

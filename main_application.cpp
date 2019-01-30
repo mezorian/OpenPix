@@ -7,6 +7,8 @@
 #include "QTUIWindow.h"
 #include "MovingDotGame.h"
 
+#include "TestDriver.h"
+
 using namespace std;
 
 int main(int argc, char **argv)
@@ -15,13 +17,12 @@ int main(int argc, char **argv)
     using namespace std::chrono; // nanoseconds, system_clock, seconds
 
     QApplication app(argc, argv);
-  /*  MovingDotGame game(10,15);
+    MovingDotGame game(10,15);
     game.init();
-    game.run2();
+    /*game.run2();
 */
 
-    DrawnWindow draw;
-    draw.show();
+    //game.doSmth();
 
     //---
     //QTUIWindow ui;
