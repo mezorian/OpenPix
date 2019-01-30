@@ -11,6 +11,7 @@
 
 // ----
 #include <vector>
+#include <chrono>  // for high_resolution_clock
 // ----
 #include "Pix.h"
 #include "PixObject.h"
@@ -25,6 +26,7 @@ class MovingDotGame : public OpenPixGameEngine {
         MovingDotGame(unsigned int width_,unsigned int height_);
         void init();
         void run();
+        void run2();
 
 };
 

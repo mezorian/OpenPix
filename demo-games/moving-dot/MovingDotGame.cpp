@@ -71,3 +71,19 @@ void MovingDotGame::run() {
 
 
 }
+
+void MovingDotGame::run2() {
+
+    for (int i = 0; i < 5; i++) {
+        auto start = std::chrono::high_resolution_clock::now();
+        auto finish = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = finish - start;
+        do {
+            finish = std::chrono::high_resolution_clock::now();
+            elapsed = finish - start;
+        } while (elapsed.count() <= 1);
+
+        run();
+    }
+
+}

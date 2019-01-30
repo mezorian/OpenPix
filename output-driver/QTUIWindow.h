@@ -8,6 +8,7 @@
 #include <QImage>
 #include <QTimer>
 #include <vector>
+#include <iostream>
 // ---
 #include "Pix.h"
 

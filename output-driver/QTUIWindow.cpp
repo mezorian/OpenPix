@@ -10,6 +10,7 @@ QTUIWindow::QTUIWindow(QWidget *parent) :
 }
 
 void QTUIWindow::paintEvent(QPaintEvent *) {
+    cout << "repaint" << endl;
     int imagewidth = 15;
     int imageheight = 10;
     int scaledimagewidth = 300;
