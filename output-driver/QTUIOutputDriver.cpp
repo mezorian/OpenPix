@@ -11,16 +11,11 @@
 
 void QTUIOutputDriver::init()
 {
-    //ui.setPixmap(pixmap); ;
+    ui.setPixmap(pixmap);
+    ui.show();
 }
 
 void QTUIOutputDriver::paint()
 {
     //ui.show();
-}
-
-void QTUIOutputDriver::doSmth()
-{
-    std::cout << "Hello World" << std::endl;
-    draw.show();
 }

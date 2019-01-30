@@ -17,6 +17,7 @@
 #include "DotPixObject.h"
 #include "PixMapOutputDriver.h"
 #include "PixMapOutputDriverType.h"
+#include <QObject>
 // ----
 
 using namespace std;

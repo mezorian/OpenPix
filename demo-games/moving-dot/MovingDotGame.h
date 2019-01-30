@@ -17,7 +17,8 @@
 #include "PixObject.h"
 #include "DotPixObject.h"
 #include "OpenPixGameEngine.h"
-#include "../../DrawnWindow.h"
+#include <QTimer>
+#include <QObject>
 // ----
 
 using namespace std;
@@ -28,8 +29,8 @@ class MovingDotGame : public OpenPixGameEngine {
         void init();
         void run();
 
-        void doSmth();
-
+        QTimer *timer;
+        void start();
 
 };
 

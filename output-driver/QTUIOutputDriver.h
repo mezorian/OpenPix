@@ -11,7 +11,6 @@
 #define QTUIOutputDriver_H
 
 #include <vector>
-#include "DrawnWindow.h"
 
 using namespace std;
 
@@ -42,13 +41,9 @@ class QTUIOutputDriver : public PixMapOutputDriverType {
         /* --- functions which were to implement --- */
         void init();
         void paint();
-        //DrawnWindow draw;
-
-
-        void doSmth();
 
     private:
-        QTUIWindow draw;
+        QTUIWindow ui;
 
 
 };

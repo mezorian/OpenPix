@@ -35,7 +35,6 @@ class PixMapOutputDriverType {
         /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void init() = 0;
         virtual void paint() = 0;
-        virtual void doSmth() = 0;
 
         vector<vector<Pix> > *getPixmap() const;
         void setPixmap(vector<vector<Pix> > *value);

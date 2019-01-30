@@ -3,7 +3,6 @@
 #include <chrono>
 #include <thread>
 
-#include "DrawnWindow.h"
 #include "QTUIWindow.h"
 #include "MovingDotGame.h"
 
@@ -19,7 +18,22 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     MovingDotGame game(10,15);
     game.init();
+    /*auto start = std::chrono::high_resolution_clock::now();
+    auto finish = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = finish - start;
+    for (int i = 0; i < 20; i++) {
+        while (elapsed.count() < 1) {
+            finish = std::chrono::high_resolution_clock::now();
+            elapsed = finish - start;
+        }
+        cout << elapsed.count() << endl;
+        start = std::chrono::high_resolution_clock::now();
+        finish = std::chrono::high_resolution_clock::now();
+        elapsed = finish - start;
+        game.run();
+    }
 
+*/
     /*game.run2();
 */
 
