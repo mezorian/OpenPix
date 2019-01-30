@@ -18,7 +18,6 @@ public:
 
 private:
     QTimer *timer;
-    MovingDotGame engine = MovingDotGame(10,15);
 };
 
 #endif // TEST_H
