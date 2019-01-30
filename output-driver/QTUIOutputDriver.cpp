@@ -17,5 +17,5 @@ void QTUIOutputDriver::init()
 
 void QTUIOutputDriver::paint()
 {
-    //ui.show();
+    ui.repaint();
 }
