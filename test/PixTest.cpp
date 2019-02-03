@@ -3,7 +3,7 @@
  * Purpose: implements tests for the Pix-class
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 #include "catch.hpp"

@@ -3,7 +3,7 @@
  * Purpose: defines interface PixObjectType
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 #ifndef PixObjectType_H

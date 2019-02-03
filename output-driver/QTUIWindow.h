@@ -1,3 +1,12 @@
+/**
+ * QTUIWindow.h
+ * Purpose: defines class QTUIWindow
+ *
+ * @author mezorian
+ * @version 0.2
+ */
+
+
 #ifndef QTUIWindow_H
 #define QTUIWindow_H
 

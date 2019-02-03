@@ -3,9 +3,8 @@
  * Purpose: defines class DotPixObject
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
-
 
 #ifndef DotPixObject_H
 #define DotPixObject_H

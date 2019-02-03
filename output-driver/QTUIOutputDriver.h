@@ -3,7 +3,7 @@
  * Purpose: defines class QTUIOutputDriver
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 

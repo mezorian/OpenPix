@@ -3,7 +3,7 @@
  * Purpose: implements class PixObjectType
  *
  * @author mezorian
- * @version 0.1s
+ * @version 0.2
  */
 
 #include "PixObjectType.h"

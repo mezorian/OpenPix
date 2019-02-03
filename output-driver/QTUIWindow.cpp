@@ -1,3 +1,12 @@
+/**
+ * QTUIWindow.cpp
+ * Purpose: implements class QTUIWindow
+ *
+ * @author mezorian
+ * @version 0.2
+ */
+
+
 #include "QTUIWindow.h"
 
 QTUIWindow::QTUIWindow(QWidget *parent) :

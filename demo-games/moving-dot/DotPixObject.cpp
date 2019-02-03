@@ -3,7 +3,7 @@
  * Purpose: implements class CrossPixObject
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 #include "DotPixObject.h"

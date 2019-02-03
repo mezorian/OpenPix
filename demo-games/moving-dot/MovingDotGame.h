@@ -3,7 +3,7 @@
  * Purpose: defines class MovingDotGame
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 #ifndef MovingDotGame_H

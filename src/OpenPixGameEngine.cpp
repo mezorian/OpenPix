@@ -3,7 +3,7 @@
  * Purpose: implements class OpenPixGameEngine
  *
  * @author mezorian
- * @version 0.1
+ * @version 0.2
  */
 
 #include "OpenPixGameEngine.h"

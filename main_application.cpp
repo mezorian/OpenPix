@@ -1,3 +1,11 @@
+/**
+ * main.cpp
+ * Purpose: main file
+ *
+ * @author mezorian
+ * @version 0.2
+ */
+
 #include <iostream>
 
 #include <chrono>
