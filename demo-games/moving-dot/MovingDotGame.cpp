@@ -1,28 +1,27 @@
 /**
- * PixMapDaemon.cpp
- * Purpose: implements class PixMapDaemon
+ * MovingDotGame.cpp
+ * Purpose: implements class MovingDotGame
  *
  * @author mezorian
- * @version 0.1s
+ * @version 0.1
  */
 
-#include "PixMapDaemon.h"
+#include "MovingDotGame.h"
+#include "QTUIOutputDriver.h"
 
-PixMapDaemon::PixMapDaemon(unsigned int width_, unsigned int height_)
+MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_) :
+    OpenPixGameEngine(width_,height_,new QTUIOutputDriver())
 {
-    pixmap.resize(height_);
-    for(unsigned int y = 0; y < height_; y++) {
-        pixmap[y].resize(width_);
-    }
+
 }
 
-void PixMapDaemon::init() {
+void MovingDotGame::init() {
     PixObject dot;
     dot.setY(5);
     dot.setX(5);
     dot.setPixObjectType(new DotPixObject());
-    dot.setPixMapDaemonHeight(pixmap.size());
-    dot.setPixMapDaemonWidth(pixmap[0].size());
+    dot.setGameEngineHeight(pixmap.size());
+    dot.setGameEngineWidth(pixmap[0].size());
     dot.create();
     pixObjects.push_back(dot);
     PixObject dot2 = dot;
@@ -37,9 +36,11 @@ void PixMapDaemon::init() {
     dot4.setY(6);
     dot4.setX(8);
     pixObjects.push_back(dot4);
+    pixMapOutputDriver.init();
 }
 
-void PixMapDaemon::run() {
+void MovingDotGame::run() {
+    pixMapOutputDriver.paint();
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {
             // unpaint
@@ -70,3 +71,11 @@ void PixMapDaemon::run() {
 
 
 }
+
+void MovingDotGame::start() {
+
+
+}
+
+
+

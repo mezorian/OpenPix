@@ -8,7 +8,7 @@
 
 #include "catch.hpp"
 #include "PixObject.h"
-#include "DotPixObject.h"
+#include "demo-games/moving-dot/DotPixObject.h"
 
 TEST_CASE("getter / setter testing") {
     PixObject pixObject;
@@ -56,14 +56,14 @@ TEST_CASE("getter / setter testing") {
         pixMapDaemonHeight=5;
     }
 
-    pixObject.setPixMapDaemonWidth(pixMapDaemonWidth);
-    pixObject.setPixMapDaemonHeight(pixMapDaemonHeight);
+    pixObject.setGameEngineWidth(pixMapDaemonWidth);
+    pixObject.setGameEngineHeight(pixMapDaemonHeight);
     pixObject.setX(x);
     pixObject.setY(y);
     REQUIRE(pixObject.getX() == x);
     REQUIRE(pixObject.getY() == y);
-    REQUIRE(pixObject.getPixMapDaemonWidth() == pixMapDaemonWidth);
-    REQUIRE(pixObject.getPixMapDaemonHeight() == pixMapDaemonHeight);
+    REQUIRE(pixObject.getGameEngineWidth() == pixMapDaemonWidth);
+    REQUIRE(pixObject.getGameEngineHeight() == pixMapDaemonHeight);
 }
 
 TEST_CASE("move testing") {
@@ -227,8 +227,8 @@ TEST_CASE("move testing") {
     pixObject.setX(x);
     pixObject.setY(y);
     pixObject.create();
-    pixObject.setPixMapDaemonWidth(pixMapDaemonWidth);
-    pixObject.setPixMapDaemonHeight(pixMapDaemonHeight);
+    pixObject.setGameEngineWidth(pixMapDaemonWidth);
+    pixObject.setGameEngineHeight(pixMapDaemonHeight);
     int oldX = pixObject.getX();
     int oldY = pixObject.getY();
 

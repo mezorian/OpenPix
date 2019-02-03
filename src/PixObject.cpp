@@ -28,17 +28,17 @@ void PixObject::create() {
  * @param xDelta_ value by which the x-coordinate of this PixObject hast to get changed
  *
  * If the new coordinates, which were calculated by this function, are out of the possible coordinates
- * of the pixmap of the PixMapDaemon they get corrected to random coordinates within the possible coordinates
+ * of the pixmap of the game engine they get corrected to random coordinates within the possible coordinates
  */
 void PixObject::move(int yDelta_, int xDelta_) {
     // calculate new coordinates
     setY(getY()+yDelta_);
     setX(getX()+xDelta_);
     // check and correct coordinates
-    if ( (getX()+1 < 0) || (getX()+1 > getPixMapDaemonWidth()) ) {
+    if ( (getX()+1 < 0) || (getX()+1 > getGameEngineWidth()) ) {
         setX(rand()%getWidth());
     }
-    if ( (getY()+1 < 0) || (getY()+1 > getPixMapDaemonHeight()) ) {
+    if ( (getY()+1 < 0) || (getY()+1 > getGameEngineHeight()) ) {
         setY(rand()%getHeight());
     }
 }
@@ -147,38 +147,38 @@ void PixObject::setY(unsigned int value_) {
 }
 
 /**
- * PixObject::getPixMapDaemonWidth
- * @brief getter of the member-variable pixMapDaemonWidth
- * @return the current value of the member-variable pixMapDaemonWidth
+ * PixObject::getGameEngineWidth
+ * @brief getter of the member-variable gameEngineWidth
+ * @return the current value of the member-variable gameEngineWidth
  */
-unsigned int PixObject::getPixMapDaemonWidth() const {
-    return pixMapDaemonWidth;
+unsigned int PixObject::getGameEngineWidth() const {
+    return gameEngineWidth;
 }
 
 /**
- * PixObject::setPixMapDaemonWidth
- * @brief setter of the member-variable pixMapDaemonWidth
- * @param value the new value for the member-variable pixMapDaemonWidth
+ * PixObject::setGameEngineWidth
+ * @brief setter of the member-variable gameEngineWidth
+ * @param value the new value for the member-variable gameEngineWidth
  */
-void PixObject::setPixMapDaemonWidth(unsigned int value_) {
-    pixMapDaemonWidth = value_;
+void PixObject::setGameEngineWidth(unsigned int value_) {
+    gameEngineWidth = value_;
 }
 
 /**
- * PixObject::getPixMapDaemonHeight
- * @brief getter of the member-variable pixMapDaemonHeight
- * @return the current value of the member-variable pixMapDaemonHeight
+ * PixObject::getGameEngineHeight
+ * @brief getter of the member-variable gameEngineHeight
+ * @return the current value of the member-variable gameEngineHeight
  */
-unsigned int PixObject::getPixMapDaemonHeight() const {
-    return pixMapDaemonHeight;
+unsigned int PixObject::getGameEngineHeight() const {
+    return gameEngineHeight;
 }
 
 /**
- * PixObject::setPixMapDaemonWidth
- * @brief setter of the member-variable pixMapDaemonWidth
- * @param value the new value for the member-variable pixMapDaemonWidth
+ * PixObject::setGameEngineWidth
+ * @brief setter of the member-variable gameEngineWidth
+ * @param value the new value for the member-variable gameEngineWidth
  */
-void PixObject::setPixMapDaemonHeight(unsigned int value_) {
-    pixMapDaemonHeight = value_;
+void PixObject::setGameEngineHeight(unsigned int value_) {
+    gameEngineHeight = value_;
 }
 

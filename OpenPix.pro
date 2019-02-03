@@ -20,24 +20,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 INCLUDEPATH += include/
+INCLUDEPATH += demo-games/moving-dot/
+INCLUDEPATH += output-driver/
 
 SOURCES += main.cpp \
-    DrawnWindow.cpp \
-    src/Pix.cpp \
-    src/PixMapDaemon.cpp \
-    src/PixObject.cpp \
     main_application.cpp \
-    test/MiscellaneousTest.cpp \
-    src/DotPixObject.cpp \
+    src/Pix.cpp \
+    src/PixObject.cpp \
     src/PixObjectType.cpp \
+    src/OpenPixGameEngine.cpp \
+    test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
-    test/PixObjectTest.cpp
+    test/PixObjectTest.cpp \
+    demo-games/moving-dot/DotPixObject.cpp \
+    demo-games/moving-dot/MovingDotGame.cpp \
+    output-driver/PixMapOutputDriver.cpp \
+    output-driver/QTUIOutputDriver.cpp \
+    output-driver/PixMapOutputDriverType.cpp \
+    output-driver/QTUIWindow.cpp
 
 HEADERS += \
-    DrawnWindow.h \
-    include/PixMapDaemon.h \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
     include/catch.hpp \
-    include/DotPixObject.h
+    include/OpenPixGameEngine.h \
+    include/MovingDotGame.h \
+    demo-games/moving-dot/DotPixObject.h \
+    demo-games/moving-dot/MovingDotGame.h \
+    output-driver/PixMapOutputDriver.h \
+    output-driver/QTUIOutputDriver.h \
+    output-driver/PixMapOutputDriverType.h \
+    output-driver/QTUIWindow.h

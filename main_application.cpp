@@ -1,16 +1,37 @@
 #include <iostream>
 
-#include "DrawnWindow.h"
+#include <chrono>
+#include <thread>
+
+#include "QTUIWindow.h"
+#include "MovingDotGame.h"
 
 using namespace std;
 
-int main2(int argc, char **argv)
+int main(int argc, char **argv)
 {
+    using namespace std::chrono; // nanoseconds, system_clock, seconds
+
     QApplication app(argc, argv);
-    DrawnWindow draw;
-    draw.show();
+    MovingDotGame game(10,15);
+    game.init();
 
-    return app.exec();
+    auto start = std::chrono::high_resolution_clock::now();
+    auto finish = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = finish - start;
+    for (int i = 0; i < 20; i++) {
+        while (elapsed.count() < 1) {
+            finish = std::chrono::high_resolution_clock::now();
+            elapsed = finish - start;
+        }
+        cout << "beep " << i << endl;
+        start = std::chrono::high_resolution_clock::now();
+        finish = std::chrono::high_resolution_clock::now();
+        elapsed = finish - start;
+        game.run();
+        game.pixMapOutputDriver.paint();
+        app.processEvents();
 
+    }
 
 }
