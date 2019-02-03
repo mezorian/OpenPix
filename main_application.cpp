@@ -26,17 +26,18 @@ int main(int argc, char **argv)
 
     auto start = std::chrono::high_resolution_clock::now();
     auto finish = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = finish - start;
+    //std::chrono::duration<double> elapsed = finish - start;
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
     for (int i = 0; i < 20; i++) {
-        while (elapsed.count() < 1) {
+        while (elapsed.count() < 1000) {
             finish = std::chrono::high_resolution_clock::now();
-            elapsed = finish - start;
+            elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
         }
-        cout << "beep " << i << endl;
+        cout << "beep " << i  << "x" << elapsed.count() << endl;
         start = std::chrono::high_resolution_clock::now();
         finish = std::chrono::high_resolution_clock::now();
-        elapsed = finish - start;
-        game.run();
+        elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
+        game.executeGameLogic();
         game.pixMapOutputDriver.paint();
         app.processEvents();
 

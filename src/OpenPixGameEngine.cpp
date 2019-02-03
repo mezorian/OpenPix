@@ -20,6 +20,42 @@ OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, 
     pixMapOutputDriver.init();
 }
 
-void OpenPixGameEngine::paint() {
+void OpenPixGameEngine::run() {
+    readInputs();
+    executeGameLogic();
+    repaint();
+}
+
+unsigned int OpenPixGameEngine::getReadInputsInterval() const
+{
+    return readInputsInterval;
+}
+
+void OpenPixGameEngine::setReadInputsInterval(unsigned int value_)
+{
+    readInputsInterval = value_;
+}
+
+unsigned int OpenPixGameEngine::getExecuteGameLogicInterval() const
+{
+    return executeGameLogicInterval;
+}
+
+void OpenPixGameEngine::setExecuteGameLogicInterval(unsigned int value_)
+{
+    executeGameLogicInterval = value_;
+}
+
+unsigned int OpenPixGameEngine::getRepaintInterval() const
+{
+    return repaintInterval;
+}
+
+void OpenPixGameEngine::setRepaintInterval(unsigned int value_)
+{
+    repaintInterval = value_;
+}
+
+void OpenPixGameEngine::repaint() {
     pixMapOutputDriver.paint();
 }

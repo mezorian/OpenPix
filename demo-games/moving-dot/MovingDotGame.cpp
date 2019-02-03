@@ -39,7 +39,12 @@ void MovingDotGame::init() {
     pixMapOutputDriver.init();
 }
 
-void MovingDotGame::run() {
+void MovingDotGame::readInputs()
+{
+
+}
+
+void MovingDotGame::executeGameLogic() {
     pixMapOutputDriver.paint();
     for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) {

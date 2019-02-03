@@ -27,7 +27,8 @@ class MovingDotGame : public OpenPixGameEngine {
     public:
         MovingDotGame(unsigned int width_,unsigned int height_);
         void init();
-        void run();
+        void readInputs();
+        void executeGameLogic();
 
         QTimer *timer;
         void start();
