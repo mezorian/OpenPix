@@ -13,11 +13,12 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
-{
-    QApplication a(argc, argv);
+int main(int argc, char **argv) {
+    // in case there is no QT-UI output deactivate this
+    QApplication application(argc, argv);
 
-    MovingDotGame game(10,15,a);
+    // create, init and run the game
+    MovingDotGame game(10,15,application);
     game.init();
     game.run();
 

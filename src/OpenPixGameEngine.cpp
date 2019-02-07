@@ -13,7 +13,6 @@
 OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_)
     : application(application_)
 {
-    //setApplication(application_);
     pixmap.resize(height_);
     for(unsigned int y = 0; y < height_; y++) {
         pixmap[y].resize(width_);
