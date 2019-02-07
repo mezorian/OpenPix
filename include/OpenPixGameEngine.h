@@ -11,6 +11,7 @@
 
 // ----
 #include <vector>
+#include <QApplication>
 // ----
 #include "Pix.h"
 #include "PixObject.h"
@@ -24,7 +25,7 @@ using namespace std;
 
 class OpenPixGameEngine {
     public:
-        OpenPixGameEngine(unsigned int width_,unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_);
+        OpenPixGameEngine(unsigned int width_,unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
         virtual void init() = 0;
         void run();
         void repaint();
@@ -43,6 +44,9 @@ class OpenPixGameEngine {
         unsigned int getRepaintInterval() const;
         void setRepaintInterval(unsigned int value_);
 
+        QApplication &getApplication() const;
+        void setApplication(const QApplication &value_);
+
 private:
         virtual void readInputs() = 0;
         virtual void executeGameLogic() = 0;
@@ -50,6 +54,8 @@ private:
         unsigned int readInputsInterval;
         unsigned int executeGameLogicInterval;
         unsigned int repaintInterval;
+
+        QApplication &application;
 
 
 };

@@ -9,8 +9,8 @@
 #include "MovingDotGame.h"
 #include "QTUIOutputDriver.h"
 
-MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_) :
-    OpenPixGameEngine(width_,height_,new QTUIOutputDriver())
+MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_, QApplication &application_) :
+    OpenPixGameEngine(width_,height_,new QTUIOutputDriver(),application_)
 {
 
 }

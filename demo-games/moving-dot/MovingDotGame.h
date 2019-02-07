@@ -19,13 +19,14 @@
 #include "OpenPixGameEngine.h"
 #include <QTimer>
 #include <QObject>
+
 // ----
 
 using namespace std;
 
 class MovingDotGame : public OpenPixGameEngine {
     public:
-        MovingDotGame(unsigned int width_,unsigned int height_);
+        MovingDotGame(unsigned int width_,unsigned int height_, QApplication &application_);
         void init();
         void readInputs();
         void executeGameLogic();
