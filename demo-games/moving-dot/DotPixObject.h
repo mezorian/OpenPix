@@ -11,7 +11,6 @@
 
 #include <vector>
 
-
 using namespace std;
 
 #include "PixObjectType.h"

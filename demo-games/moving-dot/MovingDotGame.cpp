@@ -77,10 +77,5 @@ void MovingDotGame::executeGameLogic() {
 
 }
 
-void MovingDotGame::start() {
-
-
-}
-
 
 
