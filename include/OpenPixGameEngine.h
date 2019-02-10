@@ -25,7 +25,7 @@ using namespace std;
 
 class OpenPixGameEngine {
     public:
-        OpenPixGameEngine(unsigned int width_,unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
+        OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
         virtual void init() = 0;
         void run();
         void repaint();

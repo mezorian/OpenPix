@@ -30,9 +30,6 @@ class DotPixObject : public PixObjectType {
         /* --- functions which were to implement --- */
         void create();
 
-    private:
-
-
 };
 
 #endif // DotPixObject_H
