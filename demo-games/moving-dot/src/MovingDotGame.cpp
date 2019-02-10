@@ -3,7 +3,7 @@
  * Purpose: implements class MovingDotGame
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #include "MovingDotGame.h"
