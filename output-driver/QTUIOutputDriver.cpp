@@ -9,6 +9,10 @@
 #include "QTUIOutputDriver.h"
 
 
+QTUIOutputDriver::QTUIOutputDriver()
+{
+}
+
 void QTUIOutputDriver::init()
 {
     ui.setPixmap(pixmap);

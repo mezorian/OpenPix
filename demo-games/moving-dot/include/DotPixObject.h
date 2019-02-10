@@ -3,16 +3,11 @@
  * Purpose: defines class DotPixObject
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef DotPixObject_H
 #define DotPixObject_H
-
-#include <vector>
-
-
-using namespace std;
 
 #include "PixObjectType.h"
 
@@ -30,9 +25,6 @@ class DotPixObject : public PixObjectType {
 
         /* --- functions which were to implement --- */
         void create();
-
-    private:
-
 
 };
 

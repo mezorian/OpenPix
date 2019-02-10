@@ -17,6 +17,8 @@
 unsigned int PixObjectType::getWidth() {
     if (hasPixMap()) {
         return pixmap[0].size();
+    } else {
+        return 0;
     }
 }
 
@@ -27,7 +29,6 @@ unsigned int PixObjectType::getWidth() {
  */
 unsigned int PixObjectType::getHeight() {
     return pixmap.size();
-
 }
 
 /**
@@ -46,6 +47,18 @@ bool PixObjectType::hasPixMap() {
  * @param x_ x-coordinate of the Pix which is requested
  * @return returns the requested Pix of the pixmap with the coordinates y_ and x_
  */
-Pix PixObjectType::getPix(unsigned int y_, unsigned int x_) {
-    return pixmap[y_][x_];
+Pix PixObjectType::getPix(int y_,int x_) {
+    if (hasPixMap()) {
+        if ( ( (y_ >= 0) && (y_ < getHeight()) ) &&
+             ( (x_ >= 0) && (x_ < getWidth() ) )   ) {
+            return pixmap[y_][x_];
+        } else {
+            Pix emptyPix;
+            return emptyPix;
+        }
+    } else {
+        Pix emptyPix;
+        return emptyPix;
+    }
+
 }
