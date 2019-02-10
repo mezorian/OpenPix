@@ -47,7 +47,7 @@ class OpenPixGameEngine {
         QApplication &getApplication() const;
         void setApplication(const QApplication &value_);
 
-private:
+    private:
         virtual void readInputs() = 0;
         virtual void executeGameLogic() = 0;
 
@@ -56,7 +56,6 @@ private:
         unsigned int repaintInterval;
 
         QApplication &application;
-
 
 };
 
