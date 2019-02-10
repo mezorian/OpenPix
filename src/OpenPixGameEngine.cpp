@@ -15,26 +15,26 @@
 /**
  * OpenPixGameEngine::OpenPixGameEngine
  * @brief standard-constructor which initializes all important member-variables
- * @param width_ number of PixObjects in x-axis-direction of the pixmap
- * @param height_ number of PixObjects in y-axis-direction of the pixmap
+ * @param width_ number of PixObjects in x-axis-direction of the pixMap
+ * @param height_ number of PixObjects in y-axis-direction of the pixMap
  * @param pixMapOutputDriverType_ the pixMapOutputDriverType you want to use
  * @param application_ reference to the QApplication which is created in the main.cpp
  *
  * Standard-constructor which initializes all important member-variables.
- * This function creates a pixmap of the given size, sets the pixMapOutputDriverType and
+ * This function creates a pixMap of the given size, sets the pixMapOutputDriverType and
  * initializes the pixMapOutputDriver and saves a reference of the QApplication of our main source file.
  */
 OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_)
     : application(application_)
 {
-    pixmap.resize(height_);
+    pixMap.resize(height_);
     for(unsigned int y = 0; y < height_; y++) {
-        pixmap[y].resize(width_);
+        pixMap[y].resize(width_);
     }
 
     // initialize output-driver
     pixMapOutputDriver.setPixMapOutputDriverType(pixMapOutputDriverType_);
-    pixMapOutputDriver.setPixmap(&pixmap);
+    pixMapOutputDriver.setPixmap(&pixMap);
     pixMapOutputDriver.init();
 }
 
