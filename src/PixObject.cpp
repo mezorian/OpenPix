@@ -82,7 +82,7 @@ Pix PixObject::getPix(unsigned int y_, unsigned int x_){
  * @return returns false if the pixmap of the pixObjectType is empty, otherwise true
  */
 bool PixObject::hasPixMap() {
-    pixObjectType->hasPixMap();
+    return pixObjectType->hasPixMap();
 }
 
 /* --- getter and setter --- */
