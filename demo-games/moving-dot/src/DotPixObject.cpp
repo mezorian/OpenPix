@@ -10,11 +10,11 @@
 
 /**
  * DotPixObject::create
- * @brief create creates a 1x1 pixmap with a active red Pix-object inside
+ * @brief create creates a 1x1 pixMap with a active red Pix-object inside
  */
 void DotPixObject::create() {
     Pix p(true,255,0,0);
-    pixmap.resize(1);
-    pixmap[0].resize(1);
-    pixmap[0][0] = p;
+    pixMap.resize(1);
+    pixMap[0].resize(1);
+    pixMap[0][0] = p;
 }

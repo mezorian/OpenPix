@@ -9,19 +9,19 @@
 #include "PixMapOutputDriverType.h"
 
 /**
- * PixMapOutputDriverType::getPixmap
- * @brief getter of member-variable pixmap
- * @return returns a pointer to the pixmap of the game
+ * PixMapOutputDriverType::getPixMap
+ * @brief getter of member-variable pixMap
+ * @return returns a pointer to the pixMap of the game
  */
 vector<vector<Pix> > *PixMapOutputDriverType::getPixmap() const {
-    return pixmap;
+    return pixMap;
 }
 
 /**
- * PixMapOutputDriverType::setPixmap
- * @brief setter of member-variable pixmap
- * @param sets the member-variable pixmap to a pointer of the pixmap of the game
+ * PixMapOutputDriverType::setPixMap
+ * @brief setter of member-variable pixMap
+ * @param sets the member-variable pixMap to a pointer of the pixMap of the game
  */
-void PixMapOutputDriverType::setPixmap(vector<vector<Pix> > *value_) {
-    pixmap = value_;
+void PixMapOutputDriverType::setPixMap(vector<vector<Pix> > *value_) {
+    pixMap = value_;
 }

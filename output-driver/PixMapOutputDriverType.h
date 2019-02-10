@@ -36,11 +36,11 @@ class PixMapOutputDriverType {
         virtual void paint() = 0;
 
         /* --- getters and setters --- */
-        vector<vector<Pix> > *getPixmap() const;
-        void setPixmap(vector<vector<Pix> > *value_);
+        vector<vector<Pix> > *getPixMap() const;
+        void setPixMap(vector<vector<Pix> > *value_);
 
     protected:
-        vector<vector<Pix>> *pixmap;
+        vector<vector<Pix>> *pixMap;
 };
 
 #endif // PixMapOutputDriverType_H

@@ -15,7 +15,7 @@ QTUIOutputDriver::QTUIOutputDriver()
 
 void QTUIOutputDriver::init()
 {
-    ui.setPixmap(pixmap);
+    ui.setPixMap(pixMap);
     ui.show();
 }
 
