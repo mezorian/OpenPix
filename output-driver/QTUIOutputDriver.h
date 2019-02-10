@@ -36,7 +36,7 @@ using namespace std;
 class QTUIOutputDriver : public PixMapOutputDriverType {
     public:
         /* --- constructor --- */
-    QTUIOutputDriver();
+        QTUIOutputDriver();
 
         /* --- functions which were to implement --- */
         void init();
