@@ -25,21 +25,21 @@ using namespace std;
  * PixMapOutputDriverType can be implemented by different types of sensor-classes.
  * If one wants to inherit from PixMapOutputDriverType one has to implement the init() and the paint()-function. TODO
  *
+ *
  */
 class PixMapOutputDriverType {
     public:
         /* --- constructors --- */
-        PixMapOutputDriverType() {};
+    PixMapOutputDriverType() {};
 
         /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void init() = 0;
         virtual void paint() = 0;
 
-        /* --- getters and setters --- */
         vector<vector<Pix> > *getPixmap() const;
-        void setPixmap(vector<vector<Pix> > *value_);
+        void setPixmap(vector<vector<Pix> > *value);
 
-    protected:
+protected:
         vector<vector<Pix>> *pixmap;
 };
 

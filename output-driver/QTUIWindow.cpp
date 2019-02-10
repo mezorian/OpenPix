@@ -14,6 +14,8 @@ QTUIWindow::QTUIWindow(QWidget *parent) :
 {
     setGeometry(0,0,800,600);
     timer = new QTimer(this);
+    //connect(timer, SIGNAL(timeout()), this, SLOT(repaint()));
+    //timer->start(1000);
 }
 
 void QTUIWindow::paintEvent(QPaintEvent *) {
