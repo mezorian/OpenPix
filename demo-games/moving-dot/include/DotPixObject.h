@@ -9,10 +9,6 @@
 #ifndef DotPixObject_H
 #define DotPixObject_H
 
-#include <vector>
-
-using namespace std;
-
 #include "PixObjectType.h"
 
 /**

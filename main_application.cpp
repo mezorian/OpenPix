@@ -13,7 +13,7 @@
 
 using namespace std;
 
-int main(int argc, char **argv) {
+int main2(int argc, char **argv) {
     // in case there is no QT-UI output deactivate this
     QApplication application(argc, argv);
 

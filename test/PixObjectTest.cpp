@@ -8,7 +8,7 @@
 
 #include "catch.hpp"
 #include "PixObject.h"
-#include "demo-games/moving-dot/DotPixObject.h"
+#include "DotPixObject.h"
 
 TEST_CASE("getter / setter testing") {
     PixObject pixObject;
