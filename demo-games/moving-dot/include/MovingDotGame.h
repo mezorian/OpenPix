@@ -10,6 +10,7 @@
 #define MovingDotGame_H
 
 #include "OpenPixGameEngine.h"
+#include "DotPixObject.h"
 
 using namespace std;
 

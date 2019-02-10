@@ -15,17 +15,21 @@
 // ----
 #include "Pix.h"
 #include "PixObject.h"
-#include "DotPixObject.h"
 #include "PixMapOutputDriver.h"
-#include "PixMapOutputDriverType.h"
-#include <QObject>
 // ----
 
 using namespace std;
 
+/**
+ * The OpenPixGameEngine class
+ * @brief The OpenPixGameEngine provides basic structures and
+ */
 class OpenPixGameEngine {
     public:
+        /* --- constructors --- */
         OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
+
+        /* --- general functions --- */
         virtual void init() = 0;
         void run();
         void repaint();
