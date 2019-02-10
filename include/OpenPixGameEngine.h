@@ -3,7 +3,7 @@
  * Purpose: defines class OpenPixGameEngine
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef OpenPixGameEngine_H
@@ -22,7 +22,25 @@ using namespace std;
 
 /**
  * The OpenPixGameEngine class
- * @brief The OpenPixGameEngine provides basic structures and
+ * @brief The OpenPixGameEngine provides basic structures and functions to create a 2-dim. game-engine with a pixmap of PixObjects
+ *
+ * The OpenPixGameEngine provides basic structures and functions to create a 2-dim. game-engine with a pixmap (2-dim. vector) of Pix-Objects
+ *
+ *   - init()
+ *   - readInputs()
+ *   - executeGameLogic();
+ *
+ * The OpenPixGameEngine mainly consists of three components:
+ *
+ *  1. pixmap : an 2-dimensional array of Pix-Objects which have to be displayed by the OutputDrivers
+ *  2. pixObjects : an array of all PixObjects which are in the game
+ *  3. pixMapOutputDriver : a outputdriver which outputs the current state of the pixmap to an output-device
+ *
+ * A Pix can have several properties (e.g. colors) which specify how it is displayed on the output device.
+ * A PixObject is a collection of Pix(s) which specify a object which can move and interact (e.g. collide) with other PixObjects within the pixMap.
+ * A PixMapOutputDriver is an implementation of displaying the pixmap to any kind of output-device (e.g. a LED-matrix, a GUI or a ASCII console-output)
+ *
+ * ATTENTION : The OpenPixGameEngine-class is not intended for direct usage. To create your own game inherit from this class and implement
  */
 class OpenPixGameEngine {
     public:
@@ -33,10 +51,6 @@ class OpenPixGameEngine {
         virtual void init() = 0;
         void run();
         void repaint();
-
-        vector<vector<Pix>> pixmap;
-        vector<PixObject> pixObjects;
-        PixMapOutputDriver pixMapOutputDriver;
 
         /* --- getter / setter --- */
         unsigned int getReadInputsInterval() const;
@@ -50,6 +64,11 @@ class OpenPixGameEngine {
 
         QApplication &getApplication() const;
         void setApplication(const QApplication &value_);
+
+    protected:
+        vector<vector<Pix>> pixmap;
+        vector<PixObject> pixObjects;
+        PixMapOutputDriver pixMapOutputDriver;
 
     private:
         virtual void readInputs() = 0;

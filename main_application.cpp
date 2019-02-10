@@ -20,4 +20,6 @@ int main2(int argc, char **argv) {
     game.init();
     game.run();
 
+    return 0;
+
 }
