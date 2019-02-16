@@ -29,16 +29,19 @@ using namespace std;
  */
 class QtUiWindow : public QMainWindow {
     Q_OBJECT
-public:
-    QtUiWindow(QWidget *parent = 0);
-    void paintEvent(QPaintEvent *);
+    public:
+        /* --- constructors --- */
+        QtUiWindow(QWidget *parent_ = 0);
 
-    vector<vector<Pix> > *getPixMap() const;
-    void setPixMap(vector<vector<Pix> > *value);
+        /* --- painting the pixMap to the output-device --- */
+        void paintEvent(QPaintEvent *);
 
-private:
-    QTimer *timer;
-    vector<vector<Pix>> *pixMap;
+        /* --- getters and setters --- */
+        vector<vector<Pix> > *getPixMap() const;
+        void setPixMap(vector<vector<Pix> > *value_);
+
+    private:
+        vector<vector<Pix>> *pixMap;
 };
 
 #endif // QtUiWindow_H

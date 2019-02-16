@@ -9,14 +9,15 @@
 
 #include "QtUiWindow.h"
 
+/* --- constructors --- */
+
 QtUiWindow::QtUiWindow(QWidget *parent_) :
     QMainWindow(parent_)
 {
     setGeometry(0,0,800,600);
-    timer = new QTimer(this);
-    //connect(timer, SIGNAL(timeout()), this, SLOT(repaint()));
-    //timer->start(1000);
 }
+
+/* --- painting the pixMap to the output-device --- */
 
 void QtUiWindow::paintEvent(QPaintEvent *) {
     cout << "repaint" << endl;
@@ -41,6 +42,8 @@ void QtUiWindow::paintEvent(QPaintEvent *) {
     QPainter paint(this);
     paint.drawImage(0,0,scaledImage);
 }
+
+/* --- getters and setters --- */
 
 vector<vector<Pix> > *QtUiWindow::getPixMap() const {
     return pixMap;
