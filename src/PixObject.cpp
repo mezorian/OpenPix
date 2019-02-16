@@ -11,9 +11,9 @@
 /* --- functions which are implemented by pixObjectType --- */
 /**
  * PixObject::create
- * @brief create() creates the PixObject with its PixMap inside
+ * @brief create() creates the PixObject with its pixMap inside
  *
- * Creates the PixObject with its PixMap inside.
+ * Creates the PixObject with its pixMap inside.
  * In practice create() does not really create the PixObject, but it delegates the
  * creation to the implementation of a PixObjectType-interface
  */

@@ -2,8 +2,8 @@
  * Pix.cpp
  * Purpose: implements class Pix
  *
- * @author Wall.Of.Death
- * @version 2.2
+ * @author mezorian
+ * @version 0.3
  */
 
 #include "Pix.h"
