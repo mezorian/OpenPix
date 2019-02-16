@@ -23,7 +23,7 @@ using namespace std;
 #include <QTimer>
 // ---
 #include "PixMapOutputDriverType.h"
-#include "QTUIWindow.h"
+#include "QtUiWindow.h"
 // ---
 
 /**
@@ -43,7 +43,7 @@ class QTUIOutputDriver : public PixMapOutputDriverType {
         void paint();
 
     private:
-        QTUIWindow ui;
+        QtUiWindow ui;
 
 
 };

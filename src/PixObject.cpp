@@ -85,7 +85,7 @@ bool PixObject::hasPixMap() {
     pixObjectType->hasPixMap();
 }
 
-/* --- getter and setter --- */
+/* --- getters and setters --- */
 /**
  * PixObject::getPixObjectType
  * @brief getter of the member variable pixObjectType

@@ -11,12 +11,12 @@
 #include <chrono>
 #include <thread>
 
-#include "QTUIWindow.h"
+#include "QtUiWindow.h"
 #include "MovingDotGame.h"
 
 using namespace std;
 
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 {
     using namespace std::chrono; // nanoseconds, system_clock, seconds
 
