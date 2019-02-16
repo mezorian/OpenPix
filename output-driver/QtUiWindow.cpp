@@ -9,8 +9,8 @@
 
 #include "QtUiWindow.h"
 
-QtUiWindow::QtUiWindow(QWidget *parent) :
-    QMainWindow(parent)
+QtUiWindow::QtUiWindow(QWidget *parent_) :
+    QMainWindow(parent_)
 {
     setGeometry(0,0,800,600);
     timer = new QTimer(this);
@@ -46,7 +46,7 @@ vector<vector<Pix> > *QtUiWindow::getPixMap() const {
     return pixMap;
 }
 
-void QtUiWindow::setPixMap(vector<vector<Pix> > *value) {
-    pixMap = value;
+void QtUiWindow::setPixMap(vector<vector<Pix> > *value_) {
+    pixMap = value_;
 }
 
