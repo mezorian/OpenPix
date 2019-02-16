@@ -1,14 +1,14 @@
 /**
- * QTUIWindow.h
- * Purpose: defines class QTUIWindow
+ * QtUiWindow.h
+ * Purpose: defines class QtUiWindow
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 
-#ifndef QTUIWindow_H
-#define QTUIWindow_H
+#ifndef QtUiWindow_H
+#define QtUiWindow_H
 
 #include <QApplication>
 #include <QMainWindow>
@@ -23,10 +23,14 @@
 
 using namespace std;
 
-class QTUIWindow : public QMainWindow {
+/**
+ * The QtUiWindow class
+ * @brief The QTU
+ */
+class QtUiWindow : public QMainWindow {
     Q_OBJECT
 public:
-    QTUIWindow(QWidget *parent = 0);
+    QtUiWindow(QWidget *parent = 0);
     void paintEvent(QPaintEvent *);
 
     vector<vector<Pix> > *getPixmap() const;
@@ -37,4 +41,4 @@ private:
     vector<vector<Pix>> *pixmap;
 };
 
-#endif // QTUIWindow_H
+#endif // QtUiWindow_H

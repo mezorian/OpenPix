@@ -1,15 +1,15 @@
 /**
- * QTUIWindow.cpp
- * Purpose: implements class QTUIWindow
+ * QtUiWindow.cpp
+ * Purpose: implements class QtUiWindow
  *
  * @author mezorian
  * @version 0.2
  */
 
 
-#include "QTUIWindow.h"
+#include "QtUiWindow.h"
 
-QTUIWindow::QTUIWindow(QWidget *parent) :
+QtUiWindow::QtUiWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     setGeometry(0,0,800,600);
@@ -18,7 +18,7 @@ QTUIWindow::QTUIWindow(QWidget *parent) :
     //timer->start(1000);
 }
 
-void QTUIWindow::paintEvent(QPaintEvent *) {
+void QtUiWindow::paintEvent(QPaintEvent *) {
     cout << "repaint" << endl;
     int imagewidth = 15;
     int imageheight = 10;
@@ -42,12 +42,12 @@ void QTUIWindow::paintEvent(QPaintEvent *) {
     paint.drawImage(0,0,scaledImage);
 }
 
-vector<vector<Pix> > *QTUIWindow::getPixmap() const
+vector<vector<Pix> > *QtUiWindow::getPixmap() const
 {
     return pixmap;
 }
 
-void QTUIWindow::setPixmap(vector<vector<Pix> > *value)
+void QtUiWindow::setPixmap(vector<vector<Pix> > *value)
 {
     pixmap = value;
 }

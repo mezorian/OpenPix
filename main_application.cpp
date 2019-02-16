@@ -11,7 +11,7 @@
 #include <chrono>
 #include <thread>
 
-#include "QTUIWindow.h"
+#include "QtUiWindow.h"
 #include "MovingDotGame.h"
 
 using namespace std;
