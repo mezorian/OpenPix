@@ -33,12 +33,12 @@ public:
     QtUiWindow(QWidget *parent = 0);
     void paintEvent(QPaintEvent *);
 
-    vector<vector<Pix> > *getPixmap() const;
-    void setPixmap(vector<vector<Pix> > *value);
+    vector<vector<Pix> > *getPixMap() const;
+    void setPixMap(vector<vector<Pix> > *value);
 
 private:
     QTimer *timer;
-    vector<vector<Pix>> *pixmap;
+    vector<vector<Pix>> *pixMap;
 };
 
 #endif // QtUiWindow_H

@@ -20,35 +20,33 @@ QtUiWindow::QtUiWindow(QWidget *parent) :
 
 void QtUiWindow::paintEvent(QPaintEvent *) {
     cout << "repaint" << endl;
-    int imagewidth = 15;
-    int imageheight = 10;
-    int scaledimagewidth = 300;
-    int scaledimageheight = 200;
-    QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
-    for(unsigned int y=0; y < (*pixmap).size(); y++) {
-        for(unsigned int x = 0; x < (*pixmap)[0].size(); x++) {
-            QRgb rgb = qRgb((*pixmap)[y].at(x).getRed(),(*pixmap)[y].at(x).getGreen(),(*pixmap)[y].at(x).getBlue());
+    int imageWidth = 15;
+    int imageHeight = 10;
+    int scaledImageWidth = 300;
+    int scaledImageHeight = 200;
+    QImage background(imageWidth,imageHeight, QImage::Format_ARGB32_Premultiplied);
+    for(unsigned int y=0; y < (*pixMap).size(); y++) {
+        for(unsigned int x = 0; x < (*pixMap)[0].size(); x++) {
+            QRgb rgb = qRgb((*pixMap)[y].at(x).getRed(),(*pixMap)[y].at(x).getGreen(),(*pixMap)[y].at(x).getBlue());
             background.setPixel(y,x,rgb);
         }
     }
-    /*for(unsigned int y=0; y < imageheight; y++) {
-        for(unsigned int x = 0; x < imagewidth; x++) {
+    /*for(unsigned int y=0; y < imageHeight; y++) {
+        for(unsigned int x = 0; x < imageWidth; x++) {
             QRgb rgb = qRgb(rand()%255,0,0);
             background.setPixel(x,y,rgb);
         }
     }*/
-    QImage scaledImage = background.scaled(scaledimagewidth, scaledimageheight,Qt::KeepAspectRatio);
+    QImage scaledImage = background.scaled(scaledImageWidth, scaledImageHeight,Qt::KeepAspectRatio);
     QPainter paint(this);
     paint.drawImage(0,0,scaledImage);
 }
 
-vector<vector<Pix> > *QtUiWindow::getPixmap() const
-{
-    return pixmap;
+vector<vector<Pix> > *QtUiWindow::getPixMap() const {
+    return pixMap;
 }
 
-void QtUiWindow::setPixmap(vector<vector<Pix> > *value)
-{
-    pixmap = value;
+void QtUiWindow::setPixMap(vector<vector<Pix> > *value) {
+    pixMap = value;
 }
 
