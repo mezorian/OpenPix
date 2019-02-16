@@ -34,9 +34,9 @@ class QtUiWindow : public QMainWindow {
     Q_OBJECT
     public:
         /* --- constructors --- */
-        QtUiWindow(QWidget *parent_ = 0);
+        QtUiWindow();
 
-        /* --- painting the pixMap to the output-device --- */
+        /* --- methods for painting the pixMap to the output-device --- */
         void paintEvent(QPaintEvent *);
 
         /* --- getters and setters --- */
