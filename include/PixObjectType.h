@@ -41,7 +41,7 @@ class PixObjectType {
         bool hasPixMap();
         Pix getPix(int y_, int x_);
 
-        vector<vector<Pix>> pixmap;
+        vector<vector<Pix>> pixMap;
 };
 
 #endif // PixObjectType_H

@@ -22,9 +22,9 @@ void PixMapOutputDriver::init() {
 
 /**
  * PixMapOutputDriver::paint
- * @brief paints the pixmap to the output driver
+ * @brief paints the pixMap to the output driver
  *
- * paints the pixmap to the output driver, therefor it calls the paint-method of the pixMapOutputDriverType.
+ * paints the pixMap to the output driver, therefor it calls the paint-method of the pixMapOutputDriverType.
  */
 
 void PixMapOutputDriver::paint() {
@@ -32,12 +32,6 @@ void PixMapOutputDriver::paint() {
 }
 
 /* --- getter / setter --- */
-
-/**
- * PixMapOutputDriverType::setPixmap
- * @brief setter of member-variable pixmap
- * @param sets the member-variable pixmap to a pointer of the pixmap of the game
- */
 
 /**
  * PixMapOutputDriver::getPixMapOutputDriverType
@@ -58,10 +52,10 @@ void PixMapOutputDriver::setPixMapOutputDriverType(PixMapOutputDriverType *value
 }
 
 /**
- * PixMapOutputDriver::setPixmap
- * @brief setter of member-variable pixmap
- * @param value_ pointer to the pixmap of the game
+ * PixMapOutputDriver::setPixMap
+ * @brief setter of member-variable pixMap
+ * @param value_ pointer to the pixMap of the game
  */
-void PixMapOutputDriver::setPixmap(vector<vector<Pix> > *value_) {
-    pixMapOutputDriverType->setPixmap(value_);
+void PixMapOutputDriver::setPixMap(vector<vector<Pix> > *value_) {
+    pixMapOutputDriverType->setPixMap(value_);
 }

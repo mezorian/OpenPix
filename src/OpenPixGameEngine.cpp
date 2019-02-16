@@ -15,26 +15,26 @@
 /**
  * OpenPixGameEngine::OpenPixGameEngine
  * @brief standard-constructor which initializes all important member-variables
- * @param width_ number of PixObjects in x-axis-direction of the pixmap
- * @param height_ number of PixObjects in y-axis-direction of the pixmap
+ * @param width_ number of PixObjects in x-axis-direction of the pixMap
+ * @param height_ number of PixObjects in y-axis-direction of the pixMap
  * @param pixMapOutputDriverType_ the pixMapOutputDriverType you want to use
  * @param application_ reference to the QApplication which is created in the main.cpp
  *
  * Standard-constructor which initializes all important member-variables.
- * This function creates a pixmap of the given size, sets the pixMapOutputDriverType and
+ * This function creates a pixMap of the given size, sets the pixMapOutputDriverType and
  * initializes the pixMapOutputDriver and saves a reference of the QApplication of our main source file.
  */
 OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_)
     : application(application_)
 {
-    pixmap.resize(height_);
+    pixMap.resize(height_);
     for(unsigned int y = 0; y < height_; y++) {
-        pixmap[y].resize(width_);
+        pixMap[y].resize(width_);
     }
 
     // initialize output-driver
     pixMapOutputDriver.setPixMapOutputDriverType(pixMapOutputDriverType_);
-    pixMapOutputDriver.setPixmap(&pixmap);
+    pixMapOutputDriver.setPixMap(&pixMap);
     pixMapOutputDriver.init();
 }
 
@@ -68,7 +68,7 @@ void OpenPixGameEngine::run() {
             elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
         }
 
-        // when the timer interval is finished read the inputs, execute the game logic and paint the pixmap to the output device
+        // when the timer interval is finished read the inputs, execute the game logic and paint the pixMap to the output device
         cout << "beep " << i  << "x" << elapsed.count() << endl;
         readInputs();
         executeGameLogic();
@@ -83,7 +83,7 @@ void OpenPixGameEngine::run() {
 
 /**
  * OpenPixGameEngine::repaint
- * @brief paints the current pixmap to the output device
+ * @brief paints the current pixMap to the output device
  *
  * This function calls the repaint-method of the pixMapOutputDriver.
  * If the QT-UI is used as output driver this function also triggers to process all events of the QT-UI
@@ -134,7 +134,7 @@ void OpenPixGameEngine::setExecuteGameLogicInterval(unsigned int value_) {
 /**
  * OpenPixGameEngine::getRepaintInterval
  * @brief getter of member-variable repaintInterval
- * @return returns the interval of the repaint-timer, which means the amount of milli-seconds between the pixmap is painted to the output device
+ * @return returns the interval of the repaint-timer, which means the amount of milli-seconds between the pixMap is painted to the output device
  */
 unsigned int OpenPixGameEngine::getRepaintInterval() const {
     return repaintInterval;
@@ -143,7 +143,7 @@ unsigned int OpenPixGameEngine::getRepaintInterval() const {
 /**
  * OpenPixGameEngine::setRepaintInterval
  * @brief setter of member-variable repaintInterval
- * @param value_ the interval of the repaint-timer, which means the amount of milli-seconds between the pixmap is painted to the output device
+ * @param value_ the interval of the repaint-timer, which means the amount of milli-seconds between the pixMap is painted to the output device
  */
 void OpenPixGameEngine::setRepaintInterval(unsigned int value_) {
     repaintInterval = value_;

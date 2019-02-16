@@ -188,7 +188,7 @@ TEST_CASE("move testing") {
         deltaY = 1;
     }
 
-    SECTION ("move out of pixmap right") {
+    SECTION ("move out of pixMap right") {
         x = 5;
         y = 5;
         pixMapDaemonWidth = 10;
@@ -197,7 +197,7 @@ TEST_CASE("move testing") {
         deltaY = -1;
     }
 
-    SECTION ("move out of pixmap left") {
+    SECTION ("move out of pixMap left") {
         x = 5;
         y = 5;
         pixMapDaemonWidth = 10;
@@ -206,7 +206,7 @@ TEST_CASE("move testing") {
         deltaY = -1;
     }
 
-    SECTION ("move out of pixmap up") {
+    SECTION ("move out of pixMap up") {
         x = 5;
         y = 5;
         pixMapDaemonWidth = 10;
@@ -215,7 +215,7 @@ TEST_CASE("move testing") {
         deltaY = -100;
     }
 
-    SECTION ("move out of pixmap down") {
+    SECTION ("move out of pixMap down") {
         x = 5;
         y = 5;
         pixMapDaemonWidth = 10;

@@ -28,7 +28,7 @@ void PixObject::create() {
  * @param xDelta_ value by which the x-coordinate of this PixObject hast to get changed
  *
  * If the new coordinates, which were calculated by this function, are out of the possible coordinates
- * of the pixmap of the game engine they get corrected to random coordinates within the possible coordinates
+ * of the pixMap of the game engine they get corrected to random coordinates within the possible coordinates
  */
 void PixObject::move(int yDelta_, int xDelta_) {
     // calculate new coordinates
@@ -45,8 +45,8 @@ void PixObject::move(int yDelta_, int xDelta_) {
 
 /**
  * PixObject::getWidth
- * @brief returns the width of the pixmap of the pixObjectType
- * @return returns the width of the pixmap of the pixObjectType
+ * @brief returns the width of the pixMap of the pixObjectType
+ * @return returns the width of the pixMap of the pixObjectType
  */
 unsigned int PixObject::getWidth() {
     return pixObjectType->getWidth();
@@ -54,8 +54,8 @@ unsigned int PixObject::getWidth() {
 
 /**
  * PixObject::getHeight
- * @brief returns the height of the pixmap of the pixObjectType
- * @return returns the height of the pixmap of the pixObjectType
+ * @brief returns the height of the pixMap of the pixObjectType
+ * @return returns the height of the pixMap of the pixObjectType
  */
 unsigned int PixObject::getHeight() {
     return pixObjectType->getHeight();
@@ -63,12 +63,12 @@ unsigned int PixObject::getHeight() {
 
 /**
  * PixObject::getPix
- * @brief returns a copy of a single Pix-Object within the pixmap of the pixObjectType
- * @param y_ y-coordinate within (the pixmap of the pixObjectType) of the Pix which is to return
- * @param x_ x-coordinate within (the pixmap of the pixObjectType) of the Pix which is to return
- * @return a copy of a single Pix-Object within the pixmap of the pixObjectType
+ * @brief returns a copy of a single Pix-Object within the pixMap of the pixObjectType
+ * @param y_ y-coordinate within (the pixMap of the pixObjectType) of the Pix which is to return
+ * @param x_ x-coordinate within (the pixMap of the pixObjectType) of the Pix which is to return
+ * @return a copy of a single Pix-Object within the pixMap of the pixObjectType
  *
- * Returns a copy of a single Pix-Object within the pixmap of the pixObjectType.
+ * Returns a copy of a single Pix-Object within the pixMap of the pixObjectType.
  * This function can get used for getting the Pix-informations while painting.
  * TODO : Search a better solution for this in future releases
  */
@@ -78,8 +78,8 @@ Pix PixObject::getPix(unsigned int y_, unsigned int x_){
 
 /**
  * PixObject::hasPixMap
- * @brief This function provides information about if the pixmap within the pixObjectType is empty or not
- * @return returns false if the pixmap of the pixObjectType is empty, otherwise true
+ * @brief This function provides information about if the pixMap within the pixObjectType is empty or not
+ * @return returns false if the pixMap of the pixObjectType is empty, otherwise true
  */
 bool PixObject::hasPixMap() {
     return pixObjectType->hasPixMap();

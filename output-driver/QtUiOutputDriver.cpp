@@ -13,7 +13,7 @@ QtUiOutputDriver::QtUiOutputDriver() {
 }
 
 void QtUiOutputDriver::init() {
-    ui.setPixmap(pixmap);
+    ui.setPixMap(pixMap);
     ui.show();
 }
 
