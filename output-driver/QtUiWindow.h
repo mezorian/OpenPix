@@ -25,7 +25,10 @@ using namespace std;
 
 /**
  * The QtUiWindow class
- * @brief The QTU
+ * @brief The QtUiWindow class implements a QWidget MainWindow in which the OpenPix-game can be displayed
+ *
+ * The QtUiWindow class is inherited from the QT-class QMainWindow.
+ * It creates a QWidget window with a QImage inside. This QImage displays the pixMap of the OpenPix-Game.
  */
 class QtUiWindow : public QMainWindow {
     Q_OBJECT
