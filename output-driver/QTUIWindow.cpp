@@ -23,9 +23,9 @@ void QTUIWindow::paintEvent(QPaintEvent *) {
     int scaledimagewidth = 300;
     int scaledimageheight = 200;
     QImage background(imagewidth,imageheight, QImage::Format_ARGB32_Premultiplied);
-    for(unsigned int y=0; y < (*pixmap).size(); y++) {
-        for(unsigned int x = 0; x < (*pixmap)[0].size(); x++) {
-            QRgb rgb = qRgb((*pixmap)[y].at(x).getRed(),(*pixmap)[y].at(x).getGreen(),(*pixmap)[y].at(x).getBlue());
+    for(unsigned int y=0; y < (*pixMap).size(); y++) {
+        for(unsigned int x = 0; x < (*pixMap)[0].size(); x++) {
+            QRgb rgb = qRgb((*pixMap)[y].at(x).getRed(),(*pixMap)[y].at(x).getGreen(),(*pixMap)[y].at(x).getBlue());
             background.setPixel(y,x,rgb);
         }
     }
@@ -40,13 +40,13 @@ void QTUIWindow::paintEvent(QPaintEvent *) {
     paint.drawImage(0,0,scaledImage);
 }
 
-vector<vector<Pix> > *QTUIWindow::getPixmap() const
+vector<vector<Pix> > *QTUIWindow::getPixMap() const
 {
-    return pixmap;
+    return pixMap;
 }
 
-void QTUIWindow::setPixmap(vector<vector<Pix> > *value)
+void QTUIWindow::setPixMap(vector<vector<Pix> > *value)
 {
-    pixmap = value;
+    pixMap = value;
 }
 
