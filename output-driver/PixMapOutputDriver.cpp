@@ -34,12 +34,6 @@ void PixMapOutputDriver::paint() {
 /* --- getter / setter --- */
 
 /**
- * PixMapOutputDriverType::setPixmap
- * @brief setter of member-variable pixMap
- * @param sets the member-variable pixMap to a pointer of the pixMap of the game
- */
-
-/**
  * PixMapOutputDriver::getPixMapOutputDriverType
  * @brief getter of member-variable pixMapOutputDriverType
  * @return returns the pixMapOutputDriverType

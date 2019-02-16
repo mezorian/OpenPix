@@ -34,7 +34,7 @@ OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, 
 
     // initialize output-driver
     pixMapOutputDriver.setPixMapOutputDriverType(pixMapOutputDriverType_);
-    pixMapOutputDriver.setPixmap(&pixMap);
+    pixMapOutputDriver.setPixMap(&pixMap);
     pixMapOutputDriver.init();
 }
 

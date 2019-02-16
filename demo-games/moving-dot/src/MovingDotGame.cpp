@@ -7,7 +7,7 @@
  */
 
 #include "MovingDotGame.h"
-#include "QTUIOutputDriver.h"
+#include "QtUiOutputDriver.h"
 
 /* --- constructors --- */
 
@@ -22,7 +22,7 @@
  * This function calls the constructor of OpenPixGameEngine
  */
 MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_, QApplication &application_) :
-    OpenPixGameEngine(width_,height_,new QTUIOutputDriver(),application_)
+    OpenPixGameEngine(width_,height_,new QtUiOutputDriver(),application_)
 {
 
 }

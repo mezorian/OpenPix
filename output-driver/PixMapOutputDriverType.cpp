@@ -13,7 +13,7 @@
  * @brief getter of member-variable pixMap
  * @return returns a pointer to the pixMap of the game
  */
-vector<vector<Pix> > *PixMapOutputDriverType::getPixmap() const {
+vector<vector<Pix> > *PixMapOutputDriverType::getPixMap() const {
     return pixMap;
 }
 

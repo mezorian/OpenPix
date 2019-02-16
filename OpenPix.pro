@@ -33,12 +33,12 @@ SOURCES += main.cpp \
     test/PixTest.cpp \
     test/PixObjectTest.cpp \
     output-driver/PixMapOutputDriver.cpp \
-    output-driver/QTUIOutputDriver.cpp \
     output-driver/PixMapOutputDriverType.cpp \
     output-driver/QTUIWindow.cpp \
     demo-games/moving-dot/src/DotPixObject.cpp \
     demo-games/moving-dot/src/MovingDotGame.cpp \
-    demo-games/moving-dot/test/DotPixObjectTest.cpp
+    demo-games/moving-dot/test/DotPixObjectTest.cpp \
+    output-driver/QtUiOutputDriver.cpp
 
 HEADERS += \
     include/Pix.h \
@@ -50,8 +50,8 @@ HEADERS += \
     demo-games/moving-dot/DotPixObject.h \
     demo-games/moving-dot/MovingDotGame.h \
     output-driver/PixMapOutputDriver.h \
-    output-driver/QTUIOutputDriver.h \
     output-driver/PixMapOutputDriverType.h \
     output-driver/QTUIWindow.h \
     demo-games/moving-dot/include/DotPixObject.h \
-    demo-games/moving-dot/include/MovingDotGame.h
+    demo-games/moving-dot/include/MovingDotGame.h \
+    output-driver/QtUiOutputDriver.h
