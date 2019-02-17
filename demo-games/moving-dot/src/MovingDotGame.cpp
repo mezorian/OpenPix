@@ -22,7 +22,7 @@
  * Standard-Constructor which initializes all important member variables.
  * This function calls the constructor of OpenPixGameEngine
  */
-MovingDotGame::MovingDotGame(unsigned int width_, unsigned int height_, QApplication &application_) :
+MovingDotGame::MovingDotGame(int width_, int height_, QApplication &application_) :
     OpenPixGameEngine(width_,height_,new QtUiOutputDriver(),application_)
 {
 
@@ -78,7 +78,7 @@ void MovingDotGame::executeGameLogic() {
     pixMapOutputDriver.paint();
 
     // iterate all pixObjects and first unpaint, move and then paint them
-    for (unsigned int i=0; i < pixObjects.size(); i++) {
+    for (int i=0; i < pixObjects.size(); i++) {
         if (pixObjects[i].hasPixMap()) { // only do this PixObjects which have active Pixs in their pixMap
 
             // iterate pixMap of current PixObject and unpaint every Pix
@@ -86,13 +86,13 @@ void MovingDotGame::executeGameLogic() {
             // PixObject will not get set to an empty PixObject
             // For this the coordinates of every Pix are calculated based on the top-left
             // coordinate of the PixObject
-            for (unsigned int y = 0; y < pixObjects[i].getHeight(); y++) {
-                for (unsigned int x = 0;  x < pixObjects[i].getWidth(); x++) {
+            for (int y = 0; y < pixObjects[i].getHeight(); y++) {
+                for (int x = 0;  x < pixObjects[i].getWidth(); x++) {
                     // only do this for non-transparent / active Pixs
                     if (pixObjects[i].getPix(y,x).getActive()) {
                         // calc coordinates in the games pixMap
-                        unsigned int yInPixMap = y+pixObjects[i].getY();
-                        unsigned int xInPixMap = x+pixObjects[i].getX();
+                        int yInPixMap = y+pixObjects[i].getY();
+                        int xInPixMap = x+pixObjects[i].getX();
                         // replace Pix by emtpy Pix
                         Pix emptyPix();
                         pixMap[yInPixMap][xInPixMap] = emptyPix;
@@ -110,13 +110,13 @@ void MovingDotGame::executeGameLogic() {
             // pixMap of the game.
             // For this the coordinates of every Pix are calculated based on the top-left
             // coordinate of the PixObject
-            for (unsigned int y = 0; y < pixObjects[i].getHeight(); y++) {
-                for (unsigned int x = 0;  x < pixObjects[i].getWidth(); x++) {
+            for (int y = 0; y < pixObjects[i].getHeight(); y++) {
+                for (int x = 0;  x < pixObjects[i].getWidth(); x++) {
                     // only do this for non-transparent / active Pixs
                     if (pixObjects[i].getPix(y,x).getActive()) {
                         // calc coordinates in the games pixMap
-                        unsigned int yInPixMap = y+pixObjects[i].getY();
-                        unsigned int xInPixMap = x+pixObjects[i].getX();
+                        int yInPixMap = y+pixObjects[i].getY();
+                        int xInPixMap = x+pixObjects[i].getX();
                         // copy current Pix into the pixMap of the game
                         pixMap[yInPixMap][xInPixMap] = pixObjects[i].getPix(y,x);
                     }

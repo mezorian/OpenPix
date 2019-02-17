@@ -24,11 +24,11 @@
  * This function creates a pixMap of the given size, sets the pixMapOutputDriverType and
  * initializes the pixMapOutputDriver and saves a reference of the QApplication of our main source file.
  */
-OpenPixGameEngine::OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_)
+OpenPixGameEngine::OpenPixGameEngine(int width_, int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_)
     : application(application_)
 {
     pixMap.resize(height_);
-    for(unsigned int y = 0; y < height_; y++) {
+    for(int y = 0; y < height_; y++) {
         pixMap[y].resize(width_);
     }
 
@@ -100,7 +100,7 @@ void OpenPixGameEngine::repaint() {
  * @brief getter of member-variable readInputsInterval
  * @return returns the interval of the input-timer, which means the amount of milli-seconds between the input values are read
  */
-unsigned int OpenPixGameEngine::getReadInputsInterval() const {
+int OpenPixGameEngine::getReadInputsInterval() const {
     return readInputsInterval;
 }
 
@@ -109,7 +109,7 @@ unsigned int OpenPixGameEngine::getReadInputsInterval() const {
  * @brief setter of member-variable readInputsInterval
  * @param value_ the interval of the input-timer, which means the amount of milli-seconds between the input values are read
  */
-void OpenPixGameEngine::setReadInputsInterval(unsigned int value_) {
+void OpenPixGameEngine::setReadInputsInterval(int value_) {
     readInputsInterval = value_;
 }
 
@@ -118,7 +118,7 @@ void OpenPixGameEngine::setReadInputsInterval(unsigned int value_) {
  * @brief getter of member-variable executeGameLogicInterval
  * @return returns the interval of the game-logic-timer, which means the amount of milli-seconds between the game-logic is executed
  */
-unsigned int OpenPixGameEngine::getExecuteGameLogicInterval() const {
+int OpenPixGameEngine::getExecuteGameLogicInterval() const {
     return executeGameLogicInterval;
 }
 
@@ -127,7 +127,7 @@ unsigned int OpenPixGameEngine::getExecuteGameLogicInterval() const {
  * @brief setter of member-variable executeGameLogicInterval
  * @param value_ the interval of the game-logic-timer, which means the amount of milli-seconds between the game-logic is executed
  */
-void OpenPixGameEngine::setExecuteGameLogicInterval(unsigned int value_) {
+void OpenPixGameEngine::setExecuteGameLogicInterval(int value_) {
     executeGameLogicInterval = value_;
 }
 
@@ -136,7 +136,7 @@ void OpenPixGameEngine::setExecuteGameLogicInterval(unsigned int value_) {
  * @brief getter of member-variable repaintInterval
  * @return returns the interval of the repaint-timer, which means the amount of milli-seconds between the pixMap is painted to the output device
  */
-unsigned int OpenPixGameEngine::getRepaintInterval() const {
+int OpenPixGameEngine::getRepaintInterval() const {
     return repaintInterval;
 }
 
@@ -145,6 +145,6 @@ unsigned int OpenPixGameEngine::getRepaintInterval() const {
  * @brief setter of member-variable repaintInterval
  * @param value_ the interval of the repaint-timer, which means the amount of milli-seconds between the pixMap is painted to the output device
  */
-void OpenPixGameEngine::setRepaintInterval(unsigned int value_) {
+void OpenPixGameEngine::setRepaintInterval(int value_) {
     repaintInterval = value_;
 }

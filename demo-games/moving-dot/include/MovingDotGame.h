@@ -27,7 +27,7 @@ using namespace std;
 class MovingDotGame : public OpenPixGameEngine {
     public:
         /* --- constructors --- */
-        MovingDotGame(unsigned int width_, unsigned int height_, QApplication &application_);
+        MovingDotGame(int width_, int height_, QApplication &application_);
 
         /* --- general functions --- */
         void init();
