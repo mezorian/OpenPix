@@ -42,7 +42,7 @@ class PixObjectType {
         int getHeight();
 
         bool hasPixMap();
-        Pix getPix(int y_, int x_);
+        Pix getPix(unsigned int y_, unsigned int x_);
 
         vector<vector<Pix>> pixMap;
 };

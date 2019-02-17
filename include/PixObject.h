@@ -45,7 +45,7 @@ class PixObject {
         Pix getPix(int y_,int x_);
         bool hasPixMap();
 
-        /* --- getter and setter --- */
+        /* --- getters and setters --- */
         PixObjectType *getPixObjectType() const;
         void setPixObjectType(PixObjectType *value_);
 

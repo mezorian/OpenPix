@@ -3,15 +3,11 @@
  * Purpose: implements class QTUIOutputDriver
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #include "QTUIOutputDriver.h"
 
-
-QTUIOutputDriver::QTUIOutputDriver()
-{
-}
 
 void QTUIOutputDriver::init()
 {

@@ -61,3 +61,4 @@ void PixMapOutputDriver::setPixMapOutputDriverType(PixMapOutputDriverType *value
 void PixMapOutputDriver::setPixMap(vector<vector<Pix> > *value_) {
     pixMapOutputDriverType->setPixMap(value_);
 }
+
