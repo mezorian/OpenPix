@@ -3,7 +3,7 @@
  * Purpose: defines class PixMapOutputDriver
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef PixMapOutputDriver_H

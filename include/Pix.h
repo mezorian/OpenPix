@@ -3,7 +3,7 @@
  * Purpose: defines class Pix
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef Pix_H

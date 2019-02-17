@@ -1,9 +1,9 @@
 /**
- * main.cpp
+ * main_application.cpp
  * Purpose: main source file
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #include "MovingDotGame.h"
