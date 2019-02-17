@@ -43,7 +43,7 @@ class PixMapOutputDriver {
         void setPixMapOutputDriverType(PixMapOutputDriverType *value_);
         void setPixMap(vector<vector<Pix> > *value_);
 
-private:
+    private:
         PixMapOutputDriverType *pixMapOutputDriverType;
 
 };

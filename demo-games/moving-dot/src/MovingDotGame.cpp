@@ -126,8 +126,6 @@ void MovingDotGame::executeGameLogic() {
         }
     }
 
-
-
 }
 
 

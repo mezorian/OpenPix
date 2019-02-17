@@ -28,7 +28,6 @@ using namespace std;
  * PixObjectType can be implemented by different types of sensor-classes.
  * If one wants to inherit from PixObjectType one has to implement the readSensor()-function. TODO
  *
- *
  */
 class PixObjectType {
     public:
