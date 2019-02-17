@@ -3,11 +3,12 @@
  * Purpose: implements class QtUiWindow
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
-
+// ---- OpenPix includes ----
 #include "QtUiWindow.h"
+// ----
 
 /* --- constructors --- */
 
@@ -37,6 +38,8 @@ QtUiWindow::QtUiWindow() : QMainWindow(new QWidget()) {
  *
  */
 void QtUiWindow::paintEvent(QPaintEvent *) {
+    cout << "paint" << endl;
+
     // set the size of the QImage and create it
     int imageWidth = 15;
     int imageHeight = 10;

@@ -12,7 +12,7 @@
 
 // ---- OpenPix includes ----
 #include "PixMapOutputDriverType.h"
-#include "QTUIWindow.h"
+#include "QtUiWindow.h"
 // ----
 
 using namespace std;
@@ -34,7 +34,7 @@ class QtUiOutputDriver : public PixMapOutputDriverType {
         void paint();
 
     private:
-        QTUIWindow ui;
+        QtUiWindow ui;
 
 };
 
