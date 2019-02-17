@@ -55,7 +55,7 @@ TEST_CASE("DotPixObject test general functions") {
     dotPixObject.create();
     REQUIRE(dotPixObject.getHeight() == 1);
     REQUIRE(dotPixObject.getWidth() == 1);
-    REQUIRE(dotPixObject.hasPixMap() == 1);
+    REQUIRE(dotPixObject.hasPixMap() == true);
 
     // pixMap has one red pix at 0,0
     // all other coordinates are empty
