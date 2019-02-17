@@ -46,7 +46,6 @@ HEADERS += \
     include/PixObjectType.h \
     include/catch.hpp \
     include/OpenPixGameEngine.h \
-    include/MovingDotGame.h \
     output-driver/PixMapOutputDriver.h \
     output-driver/PixMapOutputDriverType.h \
     output-driver/QtUiWindow.h \
