@@ -10,16 +10,16 @@
 #ifndef QtUiWindow_H
 #define QtUiWindow_H
 
-#include <QApplication>
+// ---- Third party includes ----
 #include <QMainWindow>
 #include <QtWidgets>
 #include <QPainter>
 #include <QImage>
-#include <QTimer>
 #include <vector>
 #include <iostream>
-// ---
+// ---- OpenPix includes ----
 #include "Pix.h"
+// ----
 
 using namespace std;
 

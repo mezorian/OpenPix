@@ -3,18 +3,17 @@
  * Purpose: defines class PixMapOutputDriver
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef PixMapOutputDriver_H
 #define PixMapOutputDriver_H
 
-// ---
+// ---- Third party includes ----
 #include <vector>
-#include <cstdlib>
-// ---
+// ---- OpenPix includes ----
 #include "PixMapOutputDriverType.h"
-// ---
+// ----
 
 using namespace std;
 
@@ -39,12 +38,12 @@ class PixMapOutputDriver {
         void init();
         void paint();
 
+        /* --- getters / setters --- */
         PixMapOutputDriverType *getPixMapOutputDriverType() const;
         void setPixMapOutputDriverType(PixMapOutputDriverType *value_);
+        void setPixMap(vector<vector<Pix> > *value_);
 
-        void setPixmap(vector<vector<Pix> > *value_);
-
-private:
+    private:
         PixMapOutputDriverType *pixMapOutputDriverType;
 
 };

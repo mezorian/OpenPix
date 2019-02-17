@@ -3,15 +3,17 @@
  * Purpose: defines interface PixMapOutputDriverType
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef PixMapOutputDriverType_H
 #define PixMapOutputDriverType_H
 
+// ---- Third party includes ----
 #include <vector>
-// ---
+// ---- OpenPix includes ----
 #include "Pix.h"
+// ----
 
 using namespace std;
 
@@ -25,22 +27,22 @@ using namespace std;
  * PixMapOutputDriverType can be implemented by different types of sensor-classes.
  * If one wants to inherit from PixMapOutputDriverType one has to implement the init() and the paint()-function. TODO
  *
- *
  */
 class PixMapOutputDriverType {
     public:
         /* --- constructors --- */
-    PixMapOutputDriverType() {};
+        PixMapOutputDriverType() {};
 
         /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void init() = 0;
         virtual void paint() = 0;
 
-        vector<vector<Pix> > *getPixmap() const;
-        void setPixmap(vector<vector<Pix> > *value);
+        /* --- getters and setters --- */
+        vector<vector<Pix> > *getPixMap() const;
+        void setPixMap(vector<vector<Pix> > *value_);
 
-protected:
-        vector<vector<Pix>> *pixmap;
+    protected:
+        vector<vector<Pix>> *pixMap;
 };
 
 #endif // PixMapOutputDriverType_H

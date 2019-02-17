@@ -2,11 +2,13 @@
  * Pix.cpp
  * Purpose: implements class Pix
  *
- * @author Wall.Of.Death
- * @version 2.2
+ * @author mezorian
+ * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "Pix.h"
+// ----
 
 /* --- constructors / destructors --- */
 
@@ -22,7 +24,7 @@
  *
  * creates a instance of the class Pix and initializes all important attributes
  */
-Pix::Pix(bool active_, unsigned int red_, unsigned int green_, unsigned int blue_) {
+Pix::Pix(bool active_, int red_, int green_, int blue_) {
     setActive(active_);
     setRed(red_);
     setGreen(green_);
@@ -87,7 +89,7 @@ void Pix::setActive(bool value_) {
  * @brief getter of member-variable red
  * @return The red part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-unsigned int Pix::getRed() const {
+int Pix::getRed() const {
     return red;
 }
 
@@ -110,7 +112,7 @@ void Pix::setRed(int value_) {
  * @brief getter of member-variable green
  * @return The green part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-unsigned int Pix::getGreen() const {
+int Pix::getGreen() const {
     return green;
 }
 
@@ -133,7 +135,7 @@ void Pix::setGreen(int value_) {
  * @brief getter of member-variable blue
  * @return The blue part of a RGB-color. Minimum Value = 0, Maximum Value = 255
  */
-unsigned int Pix::getBlue() const {
+int Pix::getBlue() const {
     return blue;
 }
 
