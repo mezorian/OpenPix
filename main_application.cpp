@@ -1,45 +1,28 @@
 /**
- * main.cpp
- * Purpose: main file
+ * main_application.cpp
+ * Purpose: main source file
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
-#include <iostream>
-
-#include <chrono>
-#include <thread>
-
-#include "QTUIWindow.h"
+// ---- Third party includes ----
+#include <QApplication>
+// ---- OpenPix includes ----
 #include "MovingDotGame.h"
+// ----
 
 using namespace std;
 
-int main2(int argc, char **argv)
-{
-    using namespace std::chrono; // nanoseconds, system_clock, seconds
+int main2(int argc, char **argv) {
+    // in case there is no QT-UI output deactivate this
+    QApplication application(argc, argv);
 
-    QApplication app(argc, argv);
-    MovingDotGame game(10,15);
+    // create, init and run the game
+    MovingDotGame game(10,15,application);
     game.init();
+    game.run();
 
-    auto start = std::chrono::high_resolution_clock::now();
-    auto finish = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = finish - start;
-    for (int i = 0; i < 20; i++) {
-        while (elapsed.count() < 1) {
-            finish = std::chrono::high_resolution_clock::now();
-            elapsed = finish - start;
-        }
-        cout << "beep " << i << endl;
-        start = std::chrono::high_resolution_clock::now();
-        finish = std::chrono::high_resolution_clock::now();
-        elapsed = finish - start;
-        game.run();
-        game.pixMapOutputDriver.paint();
-        app.processEvents();
-
-    }
+    return 0;
 
 }

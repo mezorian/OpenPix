@@ -3,14 +3,18 @@
  * Purpose: defines interface PixObjectType
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef PixObjectType_H
 #define PixObjectType_H
 
-#include "Pix.h"
+// ---- Third party includes ----
 #include "vector"
+// ---- OpenPix includes ----
+#include "Pix.h"
+// ----
+
 
 using namespace std;
 
@@ -24,7 +28,6 @@ using namespace std;
  * PixObjectType can be implemented by different types of sensor-classes.
  * If one wants to inherit from PixObjectType one has to implement the readSensor()-function. TODO
  *
- *
  */
 class PixObjectType {
     public:
@@ -35,13 +38,13 @@ class PixObjectType {
         virtual void create() = 0;
 
         /* --- miscellaneous --- */
-        unsigned int getWidth();
-        unsigned int getHeight();
+        int getWidth();
+        int getHeight();
 
         bool hasPixMap();
-        Pix getPix(unsigned int y_, unsigned int x_);
+        Pix getPix(int y_, int x_);
 
-        vector<vector<Pix>> pixmap;
+        vector<vector<Pix>> pixMap;
 };
 
 #endif // PixObjectType_H

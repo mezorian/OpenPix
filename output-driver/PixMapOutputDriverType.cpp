@@ -3,17 +3,27 @@
  * Purpose: implements class PixMapOutputDriverType
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "PixMapOutputDriverType.h"
+// ----
 
-vector<vector<Pix> > *PixMapOutputDriverType::getPixmap() const
-{
-    return pixmap;
+/**
+ * PixMapOutputDriverType::getPixMap
+ * @brief getter of member-variable pixMap
+ * @return returns a pointer to the pixMap of the game
+ */
+vector<vector<Pix> > *PixMapOutputDriverType::getPixMap() const {
+    return pixMap;
 }
 
-void PixMapOutputDriverType::setPixmap(vector<vector<Pix> > *value)
-{
-    pixmap = value;
+/**
+ * PixMapOutputDriverType::setPixMap
+ * @brief setter of member-variable pixMap
+ * @param sets the member-variable pixMap to a pointer of the pixMap of the game
+ */
+void PixMapOutputDriverType::setPixMap(vector<vector<Pix> > *value_) {
+    pixMap = value_;
 }

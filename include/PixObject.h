@@ -3,19 +3,18 @@
  * Purpose: defines class PixObject
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 #ifndef PixObject_H
 #define PixObject_H
 
-// ---
-#include <vector>
-#include <cstdlib>
-// ---
+// ---- Third party includes ----
+#include <cstdlib> // TODO : remove this if you removed rand()
+// ---- OpenPix includes ----
 #include "PixObjectType.h"
 #include "Pix.h"
-// ---
+// ----
 
 using namespace std;
 
@@ -40,34 +39,34 @@ class PixObject {
         void create();
         void move(int yDelta_ = 1, int xDelta_ = 1);
 
-        unsigned int getWidth();
-        unsigned int getHeight();
+        int getWidth();
+        int getHeight();
 
-        Pix getPix(unsigned int y_,unsigned int x_);
+        Pix getPix(int y_,int x_);
         bool hasPixMap();
 
-        /* --- getter and setter --- */
+        /* --- getters and setters --- */
         PixObjectType *getPixObjectType() const;
         void setPixObjectType(PixObjectType *value_);
 
-        unsigned int getX() const;
-        void setX(unsigned int value_);
+        int getX() const;
+        void setX(int value_);
 
-        unsigned int getY() const;
-        void setY(unsigned int value_);
+        int getY() const;
+        void setY(int value_);
 
-        unsigned int getGameEngineWidth() const;
-        void setGameEngineWidth(unsigned int value_);
+        int getGameEngineWidth() const;
+        void setGameEngineWidth(int value_);
 
-        unsigned int getGameEngineHeight() const;
-        void setGameEngineHeight(unsigned int value_);
+        int getGameEngineHeight() const;
+        void setGameEngineHeight(int value_);
 
 private:
         PixObjectType *pixObjectType;
         int x; // x-coordinate of upper-left Pix
         int y; // y-coordinate of upper-left Pix
-        unsigned int gameEngineWidth;  // TODO : search for a better solution
-        unsigned int gameEngineHeight; // than this in a later version
+        int gameEngineWidth;  // TODO : search for a better solution
+        int gameEngineHeight; // than this in a later version
 
 };
 
