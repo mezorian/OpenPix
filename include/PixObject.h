@@ -9,13 +9,12 @@
 #ifndef PixObject_H
 #define PixObject_H
 
-// ---
-#include <vector>
-#include <cstdlib>
-// ---
+// ---- Third party includes ----
+#include <cstdlib> // TODO : remove this if you removed rand()
+// ---- OpenPix includes ----
 #include "PixObjectType.h"
 #include "Pix.h"
-// ---
+// ----
 
 using namespace std;
 

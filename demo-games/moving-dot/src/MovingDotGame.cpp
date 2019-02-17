@@ -6,8 +6,9 @@
  * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "MovingDotGame.h"
-#include "QtUiOutputDriver.h"
+// ----
 
 /* --- constructors --- */
 

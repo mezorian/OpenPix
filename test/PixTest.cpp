@@ -6,8 +6,11 @@
  * @version 0.3
  */
 
+// ---- Third party includes ----
 #include "catch.hpp"
+// ---- OpenPix includes ----
 #include "Pix.h"
+// ----
 
 TEST_CASE("Pix constructor / getter / setter / operator testing") {
     bool active;

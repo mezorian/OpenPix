@@ -6,9 +6,12 @@
  * @version 0.3
  */
 
+// ---- Third party includes ----
 #include "catch.hpp"
+// ---- OpenPix includes ----
 #include "DotPixObject.h"
 #include "Pix.h"
+// ----
 
 TEST_CASE("DotPixObject test general functions") {
     DotPixObject dotPixObject;

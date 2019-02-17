@@ -6,7 +6,9 @@
  * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "PixMapOutputDriver.h"
+// ----
 
 /* --- functions which are implemented by PixMapOutputDriverType --- */
 

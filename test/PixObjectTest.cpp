@@ -6,9 +6,12 @@
  * @version 0.3
  */
 
+// ---- Third party includes ----
 #include "catch.hpp"
+// ---- OpenPix includes ----
 #include "PixObject.h"
 #include "DotPixObject.h"
+// ----
 
 TEST_CASE("getter / setter testing") {
     PixObject pixObject;

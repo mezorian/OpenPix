@@ -9,9 +9,11 @@
 #ifndef PixMapOutputDriverType_H
 #define PixMapOutputDriverType_H
 
+// ---- Third party includes ----
 #include <vector>
-// ---
+// ---- OpenPix includes ----
 #include "Pix.h"
+// ----
 
 using namespace std;
 

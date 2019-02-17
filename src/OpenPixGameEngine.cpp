@@ -6,9 +6,9 @@
  * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "OpenPixGameEngine.h"
-#include <chrono>
-#include "QTUIWindow.h"
+// ----
 
 /* --- constructors --- */
 
@@ -69,7 +69,7 @@ void OpenPixGameEngine::run() {
         }
 
         // when the timer interval is finished read the inputs, execute the game logic and paint the pixMap to the output device
-        cout << "beep " << i  << "x" << elapsed.count() << endl;
+        cout << "run" << endl;
         readInputs();
         executeGameLogic();
         repaint();

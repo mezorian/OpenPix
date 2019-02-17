@@ -9,8 +9,11 @@
 #ifndef MovingDotGame_H
 #define MovingDotGame_H
 
+// ---- OpenPix includes ----
 #include "OpenPixGameEngine.h"
 #include "DotPixObject.h"
+#include "QtUiOutputDriver.h"
+// ----
 
 using namespace std;
 
