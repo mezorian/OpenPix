@@ -9,8 +9,12 @@
 #ifndef PixObjectType_H
 #define PixObjectType_H
 
-#include "Pix.h"
+// ---- Third party includes ----
 #include "vector"
+// ---- OpenPix includes ----
+#include "Pix.h"
+// ----
+
 
 using namespace std;
 

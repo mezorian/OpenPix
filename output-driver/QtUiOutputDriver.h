@@ -10,21 +10,12 @@
 #ifndef QtUiOutputDriver_H
 #define QtUiOutputDriver_H
 
-#include <vector>
-
-using namespace std;
-
-// ---
-#include <QApplication>
-#include <QMainWindow>
-#include <QtWidgets>
-#include <QPainter>
-#include <QImage>
-#include <QTimer>
-// ---
+// ---- OpenPix includes ----
 #include "PixMapOutputDriverType.h"
 #include "QTUIWindow.h"
-// ---
+// ----
+
+using namespace std;
 
 /**
  * QtUiOutputDriver class

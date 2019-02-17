@@ -6,7 +6,9 @@
  * @version 0.3
  */
 
+// ---- OpenPix includes ----
 #include "PixMapOutputDriverType.h"
+// ----
 
 /**
  * PixMapOutputDriverType::getPixMap

@@ -6,4 +6,6 @@
  * @version 0.3
  */
 
+// ---- Third party includes ----
 #include "catch.hpp"
+// ----

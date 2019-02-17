@@ -6,8 +6,11 @@
  * @version 0.3
  */
 
-#include "MovingDotGame.h"
+// ---- Third party includes ----
 #include <QApplication>
+// ---- OpenPix includes ----
+#include "MovingDotGame.h"
+// ----
 
 using namespace std;
 

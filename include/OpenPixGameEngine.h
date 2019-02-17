@@ -9,10 +9,12 @@
 #ifndef OpenPixGameEngine_H
 #define OpenPixGameEngine_H
 
-// ----
-#include <vector>
+// ---- Third party includes ----
 #include <QApplication>
-// ----
+#include <vector>
+#include <chrono>
+#include <iostream>
+// ---- OpenPix includes
 #include "Pix.h"
 #include "PixObject.h"
 #include "PixMapOutputDriver.h"
