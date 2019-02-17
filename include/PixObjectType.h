@@ -39,8 +39,8 @@ class PixObjectType {
         virtual void create() = 0;
 
         /* --- miscellaneous --- */
-        unsigned int getWidth();
-        unsigned int getHeight();
+        int getWidth();
+        int getHeight();
 
         bool hasPixMap();
         Pix getPix(int y_, int x_);

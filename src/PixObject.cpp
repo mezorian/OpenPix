@@ -50,7 +50,7 @@ void PixObject::move(int yDelta_, int xDelta_) {
  * @brief returns the width of the pixMap of the pixObjectType
  * @return returns the width of the pixMap of the pixObjectType
  */
-unsigned int PixObject::getWidth() {
+int PixObject::getWidth() {
     return pixObjectType->getWidth();
 }
 
@@ -59,7 +59,7 @@ unsigned int PixObject::getWidth() {
  * @brief returns the height of the pixMap of the pixObjectType
  * @return returns the height of the pixMap of the pixObjectType
  */
-unsigned int PixObject::getHeight() {
+int PixObject::getHeight() {
     return pixObjectType->getHeight();
 }
 
@@ -74,7 +74,7 @@ unsigned int PixObject::getHeight() {
  * This function can get used for getting the Pix-informations while painting.
  * TODO : Search a better solution for this in future releases
  */
-Pix PixObject::getPix(unsigned int y_, unsigned int x_){
+Pix PixObject::getPix(int y_, int x_){
     return pixObjectType->getPix(y_,x_);
 }
 
@@ -117,7 +117,7 @@ void PixObject::setPixObjectType(PixObjectType *value_) {
  * @brief getter of the member-variable x
  * @return the current value of the member-variable x, which is the x-coordinate of upper-left Pix
  */
-unsigned int PixObject::getX() const {
+int PixObject::getX() const {
     return x;
 }
 
@@ -126,7 +126,7 @@ unsigned int PixObject::getX() const {
  * @brief setter of the member-variable x
  * @param value the new value for the member-variable x, which is the x-coordinate of upper-left Pix
  */
-void PixObject::setX(unsigned int value_) {
+void PixObject::setX(int value_) {
     x = value_;
 }
 
@@ -135,7 +135,7 @@ void PixObject::setX(unsigned int value_) {
  * @brief getter of the member-variable y
  * @return the current value of the member-variable y, which is the y-coordinate of upper-left Pix
  */
-unsigned int PixObject::getY() const {
+int PixObject::getY() const {
     return y;
 }
 
@@ -144,7 +144,7 @@ unsigned int PixObject::getY() const {
  * @brief setter of the member-variable y
  * @param value the new value for the member-variable y, which is the y-coordinate of upper-left Pix
  */
-void PixObject::setY(unsigned int value_) {
+void PixObject::setY(int value_) {
     y = value_;
 }
 
@@ -153,7 +153,7 @@ void PixObject::setY(unsigned int value_) {
  * @brief getter of the member-variable gameEngineWidth
  * @return the current value of the member-variable gameEngineWidth
  */
-unsigned int PixObject::getGameEngineWidth() const {
+int PixObject::getGameEngineWidth() const {
     return gameEngineWidth;
 }
 
@@ -162,7 +162,7 @@ unsigned int PixObject::getGameEngineWidth() const {
  * @brief setter of the member-variable gameEngineWidth
  * @param value the new value for the member-variable gameEngineWidth
  */
-void PixObject::setGameEngineWidth(unsigned int value_) {
+void PixObject::setGameEngineWidth(int value_) {
     gameEngineWidth = value_;
 }
 
@@ -171,7 +171,7 @@ void PixObject::setGameEngineWidth(unsigned int value_) {
  * @brief getter of the member-variable gameEngineHeight
  * @return the current value of the member-variable gameEngineHeight
  */
-unsigned int PixObject::getGameEngineHeight() const {
+int PixObject::getGameEngineHeight() const {
     return gameEngineHeight;
 }
 
@@ -180,7 +180,7 @@ unsigned int PixObject::getGameEngineHeight() const {
  * @brief setter of the member-variable gameEngineWidth
  * @param value the new value for the member-variable gameEngineWidth
  */
-void PixObject::setGameEngineHeight(unsigned int value_) {
+void PixObject::setGameEngineHeight(int value_) {
     gameEngineHeight = value_;
 }
 

@@ -47,7 +47,7 @@ using namespace std;
 class OpenPixGameEngine {
     public:
         /* --- constructors --- */
-        OpenPixGameEngine(unsigned int width_, unsigned int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
+        OpenPixGameEngine(int width_, int height_, PixMapOutputDriverType *pixMapOutputDriverType_, QApplication &application_);
 
         /* --- general functions --- */
         virtual void init() = 0;
@@ -55,14 +55,14 @@ class OpenPixGameEngine {
         void repaint();
 
         /* --- getter / setter --- */
-        unsigned int getReadInputsInterval() const;
-        void setReadInputsInterval(unsigned int value_);
+        int getReadInputsInterval() const;
+        void setReadInputsInterval(int value_);
 
-        unsigned int getExecuteGameLogicInterval() const;
-        void setExecuteGameLogicInterval(unsigned int value_);
+        int getExecuteGameLogicInterval() const;
+        void setExecuteGameLogicInterval(int value_);
 
-        unsigned int getRepaintInterval() const;
-        void setRepaintInterval(unsigned int value_);
+        int getRepaintInterval() const;
+        void setRepaintInterval(int value_);
 
         QApplication &getApplication() const;
         void setApplication(const QApplication &value_);
@@ -76,9 +76,9 @@ class OpenPixGameEngine {
         virtual void readInputs() = 0;
         virtual void executeGameLogic() = 0;
 
-        unsigned int readInputsInterval;
-        unsigned int executeGameLogicInterval;
-        unsigned int repaintInterval;
+        int readInputsInterval;
+        int executeGameLogicInterval;
+        int repaintInterval;
 
         QApplication &application;
 

@@ -16,7 +16,7 @@
  * @brief provides information about how many Pix(s) are stored in the pixMap in x-axis-direction
  * @return returns the amount of Pix(s) are stored in the pixMap in x-axis-direction
  */
-unsigned int PixObjectType::getWidth() {
+int PixObjectType::getWidth() {
     if (hasPixMap()) {
         return pixMap[0].size();
     } else {
@@ -29,7 +29,7 @@ unsigned int PixObjectType::getWidth() {
  * @brief provides information about how many Pix(s) are stored in the pixMap in y-axis-direction
  * @return returns the amount of Pix(s) are stored in the pixMap in y-axis-direction
  */
-unsigned int PixObjectType::getHeight() {
+int PixObjectType::getHeight() {
     return pixMap.size();
 }
 
