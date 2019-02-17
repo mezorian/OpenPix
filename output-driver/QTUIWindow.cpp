@@ -3,7 +3,7 @@
  * Purpose: implements class QTUIWindow
  *
  * @author mezorian
- * @version 0.2
+ * @version 0.3
  */
 
 
