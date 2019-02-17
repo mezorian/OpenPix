@@ -25,16 +25,16 @@ using namespace std;
 
 class QTUIWindow : public QMainWindow {
     Q_OBJECT
-public:
-    QTUIWindow(QWidget *parent = 0);
-    void paintEvent(QPaintEvent *);
+    public:
+        QTUIWindow(QWidget *parent = 0);
+        void paintEvent(QPaintEvent *);
 
-    vector<vector<Pix> > *getPixMap() const;
-    void setPixMap(vector<vector<Pix> > *value);
+        vector<vector<Pix> > *getPixMap() const;
+        void setPixMap(vector<vector<Pix> > *value);
 
-private:
-    QTimer *timer;
-    vector<vector<Pix>> *pixMap;
+    private:
+        QTimer *timer;
+        vector<vector<Pix>> *pixMap;
 };
 
 #endif // QTUIWindow_H
