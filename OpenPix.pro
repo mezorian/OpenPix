@@ -31,7 +31,6 @@ SOURCES += main.cpp \
     src/OpenPixGameEngine.cpp \
     test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
-    test/PixObjectTest.cpp \
     output-driver/PixMapOutputDriver.cpp \
     output-driver/PixMapOutputDriverType.cpp \
     output-driver/QtUiWindow.cpp \
