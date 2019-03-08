@@ -12,7 +12,7 @@
 
 /**
  * BoarderPixObject::create
- * @brief create creates a 1x1 pixMap with a active red Pix-object inside
+ * @brief create creates a getGameEngineHeight x getGameEngineWidth pixMap with active blue Pix-objects at the outer Pix(s) of the pixMap
  */
 void BoarderPixObject::create() {
     Pix p(true,66, 134, 244);

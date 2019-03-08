@@ -30,7 +30,7 @@ void DotPixObject::create() {
  */
 void DotPixObject::move() {
     // check coordinates and correct direction
-    if (getX() <= 0) {
+    if (getX() <= 1) {
         switch (getDir()) {
             case Direction::DOWN_LEFT :
                 setDir(Direction::DOWN_RIGHT);
@@ -43,7 +43,7 @@ void DotPixObject::move() {
         }
     }
 
-    if (getX() >= getGameEngineWidth() - 1) {
+    if (getX() >= getGameEngineWidth() - 2) {
         switch (getDir()) {
             case Direction::DOWN_RIGHT :
                 setDir(Direction::DOWN_LEFT);
@@ -56,7 +56,7 @@ void DotPixObject::move() {
         }
     }
 
-    if (getY() <= 0) {
+    if (getY() <= 1) {
         switch (getDir()) {
             case Direction::UP_RIGHT :
                 setDir(Direction::DOWN_RIGHT);
@@ -69,7 +69,7 @@ void DotPixObject::move() {
         }
     }
 
-    if (getY() >= getGameEngineHeight() - 1) {
+    if (getY() >= getGameEngineHeight() - 2) {
         switch (getDir()) {
             case Direction::DOWN_RIGHT :
                 setDir(Direction::UP_RIGHT);
