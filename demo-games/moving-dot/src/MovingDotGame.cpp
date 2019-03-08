@@ -46,28 +46,16 @@ void MovingDotGame::init() {
         dot.create();
         pixObjects.push_back(dot);
     }
-/*
-    PixObject dot;
-    dot.setPixObjectType(new DotPixObject());
-    dot.setGameEngineHeight(pixMap.size());
-    dot.setGameEngineWidth(pixMap[0].size());
-    dot.setY(rand() % dot.getGameEngineHeight());
-    dot.setX(rand() % dot.getGameEngineWidth());
-    dot.create();
-    pixObjects.push_back(dot);
-    // copy first DotPixObject several times and add the copies to the game
-    PixObject dot2 = dot;
-    dot2.setY(rand() % dot2.getGameEngineHeight());
-    dot2.setX(rand() % dot2.getGameEngineWidth());
-    pixObjects.push_back(dot2);
-    PixObject dot3 = dot;
-    dot3.setY(rand() % dot3.getGameEngineHeight());
-    dot3.setX(rand() % dot3.getGameEngineWidth());
-    pixObjects.push_back(dot3);
-    PixObject dot4 = dot;
-    dot4.setY(rand() % dot4.getGameEngineHeight());
-    dot4.setX(rand() % dot4.getGameEngineWidth());
-    pixObjects.push_back(dot4);*/
+
+    PixObject boarder;
+    boarder.setPixObjectType(new BoarderPixObject());
+    boarder.setGameEngineHeight(pixMap.size());
+    boarder.setGameEngineWidth(pixMap[0].size());
+    boarder.setY(0);
+    boarder.setX(0);
+    boarder.create();
+    pixObjects.push_back(boarder);
+
     // initialize the output-drivers
     pixMapOutputDriver.init();
 }

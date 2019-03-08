@@ -38,7 +38,8 @@ SOURCES += main.cpp \
     output-driver/QtUiOutputDriver.cpp \
     demo-games/moving-dot/src/DotPixObject.cpp \
     demo-games/moving-dot/src/MovingDotGame.cpp \
-    demo-games/moving-dot/test/DotPixObjectTest.cpp
+    demo-games/moving-dot/test/DotPixObjectTest.cpp \
+    demo-games/moving-dot/src/BoarderPixObject.cpp
 
 HEADERS += \
     include/Pix.h \
@@ -53,4 +54,5 @@ HEADERS += \
     demo-games/moving-dot/include/DotPixObject.h \
     demo-games/moving-dot/include/MovingDotGame.h \
     demo-games/moving-dot/include/DotPixObject.h \
-    include/Types.h
+    include/Types.h \
+    demo-games/moving-dot/include/BoarderPixObject.h

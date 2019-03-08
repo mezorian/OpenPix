@@ -24,11 +24,9 @@ void DotPixObject::create() {
 /**
  * DotPixObject::move
  * @brief moves the DotPixObject by changing the x and y member variables
- * @param yDelta_ value by which the y-coordinate of this DotPixObject hast to get changed
- * @param xDelta_ value by which the x-coordinate of this DotPixObject hast to get changed
  *
- * If the new coordinates, which were calculated by this function, are out of the possible coordinates
- * of the pixMap of the game engine they get corrected to random coordinates within the possible coordinates
+ * If the new coordinates, which were calculated by this function, touch the boarder of this game,
+ * the direction is changed as if the DotPixObject is bouncing away from the boarder
  */
 void DotPixObject::move() {
     // check coordinates and correct direction
