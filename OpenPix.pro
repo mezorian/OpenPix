@@ -31,14 +31,14 @@ SOURCES += main.cpp \
     src/OpenPixGameEngine.cpp \
     test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
-    test/PixObjectTest.cpp \
     output-driver/PixMapOutputDriver.cpp \
     output-driver/PixMapOutputDriverType.cpp \
     output-driver/QtUiWindow.cpp \
     output-driver/QtUiOutputDriver.cpp \
     demo-games/moving-dot/src/DotPixObject.cpp \
     demo-games/moving-dot/src/MovingDotGame.cpp \
-    demo-games/moving-dot/test/DotPixObjectTest.cpp
+    demo-games/moving-dot/test/DotPixObjectTest.cpp \
+    demo-games/moving-dot/src/BorderPixObject.cpp
 
 HEADERS += \
     include/Pix.h \
@@ -52,4 +52,6 @@ HEADERS += \
     output-driver/QtUiOutputDriver.h \
     demo-games/moving-dot/include/DotPixObject.h \
     demo-games/moving-dot/include/MovingDotGame.h \
-    demo-games/moving-dot/include/DotPixObject.h
+    demo-games/moving-dot/include/DotPixObject.h \
+    include/Types.h \
+    demo-games/moving-dot/include/BorderPixObject.h

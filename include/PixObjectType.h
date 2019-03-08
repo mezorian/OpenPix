@@ -36,15 +36,35 @@ class PixObjectType {
 
         /* --- functions which are to implement by a concrete stategy - class --- */
         virtual void create() = 0;
+        virtual void move() = 0;
 
         /* --- miscellaneous --- */
         int getWidth();
         int getHeight();
 
+        int getX() const;
+        void setX(int value_);
+
+        int getY() const;
+        void setY(int value_);
+
+        int getGameEngineWidth() const;
+        void setGameEngineWidth(int value_);
+
+        int getGameEngineHeight() const;
+        void setGameEngineHeight(int value_);
+
         bool hasPixMap();
         Pix getPix(int y_, int x_);
 
         vector<vector<Pix>> pixMap;
+
+    private:
+        int x; // x-coordinate of upper-left Pix
+        int y; // y-coordinate of upper-left Pix
+        int gameEngineWidth;  // TODO : search for a better solution
+        int gameEngineHeight; // than this in a later version
+
 };
 
 #endif // PixObjectType_H

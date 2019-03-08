@@ -25,24 +25,10 @@ void PixObject::create() {
 
 /**
  * PixObject::move
- * @brief moves the PixObject by changing the x and y member variables
- * @param yDelta_ value by which the y-coordinate of this PixObject hast to get changed
- * @param xDelta_ value by which the x-coordinate of this PixObject hast to get changed
- *
- * If the new coordinates, which were calculated by this function, are out of the possible coordinates
- * of the pixMap of the game engine they get corrected to random coordinates within the possible coordinates
+ * @brief moves the PixObject by calling the move method of DotPixObject
  */
-void PixObject::move(int yDelta_, int xDelta_) {
-    // calculate new coordinates
-    setY(getY()+yDelta_);
-    setX(getX()+xDelta_);
-    // check and correct coordinates
-    if ( (getX()+1 < 0) || (getX()+1 > getGameEngineWidth()) ) {
-        setX(rand()%getWidth());
-    }
-    if ( (getY()+1 < 0) || (getY()+1 > getGameEngineHeight()) ) {
-        setY(rand()%getHeight());
-    }
+void PixObject::move() {
+    pixObjectType->move();
 }
 
 /**
@@ -118,7 +104,7 @@ void PixObject::setPixObjectType(PixObjectType *value_) {
  * @return the current value of the member-variable x, which is the x-coordinate of upper-left Pix
  */
 int PixObject::getX() const {
-    return x;
+    return pixObjectType->getX();
 }
 
 /**
@@ -127,7 +113,7 @@ int PixObject::getX() const {
  * @param value the new value for the member-variable x, which is the x-coordinate of upper-left Pix
  */
 void PixObject::setX(int value_) {
-    x = value_;
+    pixObjectType->setX(value_);
 }
 
 /**
@@ -136,7 +122,7 @@ void PixObject::setX(int value_) {
  * @return the current value of the member-variable y, which is the y-coordinate of upper-left Pix
  */
 int PixObject::getY() const {
-    return y;
+    return pixObjectType->getY();
 }
 
 /**
@@ -145,7 +131,7 @@ int PixObject::getY() const {
  * @param value the new value for the member-variable y, which is the y-coordinate of upper-left Pix
  */
 void PixObject::setY(int value_) {
-    y = value_;
+    pixObjectType->setY(value_);
 }
 
 /**
@@ -154,7 +140,7 @@ void PixObject::setY(int value_) {
  * @return the current value of the member-variable gameEngineWidth
  */
 int PixObject::getGameEngineWidth() const {
-    return gameEngineWidth;
+    return pixObjectType->getGameEngineWidth();
 }
 
 /**
@@ -163,7 +149,7 @@ int PixObject::getGameEngineWidth() const {
  * @param value the new value for the member-variable gameEngineWidth
  */
 void PixObject::setGameEngineWidth(int value_) {
-    gameEngineWidth = value_;
+    pixObjectType->setGameEngineWidth(value_);
 }
 
 /**
@@ -172,7 +158,7 @@ void PixObject::setGameEngineWidth(int value_) {
  * @return the current value of the member-variable gameEngineHeight
  */
 int PixObject::getGameEngineHeight() const {
-    return gameEngineHeight;
+    return pixObjectType->getGameEngineHeight();
 }
 
 /**
@@ -181,6 +167,6 @@ int PixObject::getGameEngineHeight() const {
  * @param value the new value for the member-variable gameEngineWidth
  */
 void PixObject::setGameEngineHeight(int value_) {
-    gameEngineHeight = value_;
+    pixObjectType->setGameEngineHeight(value_);
 }
 

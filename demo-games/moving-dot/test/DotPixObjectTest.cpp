@@ -10,6 +10,7 @@
 #include "catch.hpp"
 // ---- OpenPix includes ----
 #include "DotPixObject.h"
+#include "PixObject.h"
 #include "Pix.h"
 // ----
 
@@ -62,9 +63,12 @@ TEST_CASE("DotPixObject test general functions") {
     pix = dotPixObject.getPix(y,x);
     if ((y == 0) && (x == 0)) {
         REQUIRE(pix.getActive() == true);
-        REQUIRE(pix.getRed() == 255);
-        REQUIRE(pix.getGreen() == 0);
-        REQUIRE(pix.getBlue() == 0);
+        REQUIRE(pix.getRed()   <= 255);
+        REQUIRE(pix.getRed()   >= 0);
+        REQUIRE(pix.getGreen() <= 255);
+        REQUIRE(pix.getGreen() >= 0);
+        REQUIRE(pix.getBlue()  <= 255);
+        REQUIRE(pix.getBlue()  >= 0);
     } else {
         REQUIRE(pix.getActive() == false);
         REQUIRE(pix.getRed() == 0);
@@ -72,3 +76,61 @@ TEST_CASE("DotPixObject test general functions") {
         REQUIRE(pix.getBlue() == 0);
     }
 }
+
+TEST_CASE("getter / setter testing") {
+    PixObject pixObject;
+    int x,y,pixMapDaemonWidth,pixMapDaemonHeight;
+
+    SECTION("big negative values") {
+        x=-16678;
+        y=-323424;
+        pixMapDaemonWidth=-13453454;
+        pixMapDaemonHeight=-323423234;
+    }
+
+    SECTION("small negative values") {
+        x=-1;
+        y=-34;
+        pixMapDaemonWidth=-10;
+        pixMapDaemonHeight=-50;
+    }
+
+    SECTION("zeros") {
+        x=0;
+        y=0;
+        pixMapDaemonWidth=0;
+        pixMapDaemonHeight=0;
+    }
+
+    SECTION("small values") {
+        x=1;
+        y=34;
+        pixMapDaemonWidth=10;
+        pixMapDaemonHeight=50;
+    }
+
+    SECTION("big values") {
+        x=1678;
+        y=3244;
+        pixMapDaemonWidth=13453434;
+        pixMapDaemonHeight=3234244234;
+    }
+
+    SECTION("values out of bounds is also allowed") {
+        x=10;
+        y=10;
+        pixMapDaemonWidth=5;
+        pixMapDaemonHeight=5;
+    }
+
+    pixObject.setPixObjectType(new DotPixObject());
+    pixObject.setGameEngineWidth(pixMapDaemonWidth);
+    pixObject.setGameEngineHeight(pixMapDaemonHeight);
+    pixObject.setX(x);
+    pixObject.setY(y);
+    REQUIRE(pixObject.getX() == x);
+    REQUIRE(pixObject.getY() == y);
+    REQUIRE(pixObject.getGameEngineWidth() == pixMapDaemonWidth);
+    REQUIRE(pixObject.getGameEngineHeight() == pixMapDaemonHeight);
+}
+
