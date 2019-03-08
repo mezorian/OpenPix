@@ -15,7 +15,7 @@
  * @brief create creates a 1x1 pixMap with a active red Pix-object inside
  */
 void DotPixObject::create() {
-    Pix p(true,255,0,0);
+    Pix p(true,rand()%255,rand()%255,rand()%255);
     pixMap.resize(1);
     pixMap[0].resize(1);
     pixMap[0][0] = p;
