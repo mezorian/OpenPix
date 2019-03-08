@@ -38,7 +38,7 @@ SOURCES += main.cpp \
     demo-games/moving-dot/src/DotPixObject.cpp \
     demo-games/moving-dot/src/MovingDotGame.cpp \
     demo-games/moving-dot/test/DotPixObjectTest.cpp \
-    demo-games/moving-dot/src/BoarderPixObject.cpp
+    demo-games/moving-dot/src/BorderPixObject.cpp
 
 HEADERS += \
     include/Pix.h \
@@ -54,4 +54,4 @@ HEADERS += \
     demo-games/moving-dot/include/MovingDotGame.h \
     demo-games/moving-dot/include/DotPixObject.h \
     include/Types.h \
-    demo-games/moving-dot/include/BoarderPixObject.h
+    demo-games/moving-dot/include/BorderPixObject.h

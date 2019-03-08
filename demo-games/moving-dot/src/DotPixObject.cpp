@@ -12,7 +12,7 @@
 
 /**
  * DotPixObject::create
- * @brief create creates a 1x1 pixMap with a active red Pix-object inside
+ * @brief create creates a 1x1 pixMap with a active random-colored Pix-object inside
  */
 void DotPixObject::create() {
     Pix p(true,rand()%255,rand()%255,rand()%255);
@@ -25,11 +25,12 @@ void DotPixObject::create() {
  * DotPixObject::move
  * @brief moves the DotPixObject by changing the x and y member variables
  *
- * If the new coordinates, which were calculated by this function, touch the boarder of this game,
+ * If the new coordinates, which are calculated by this function, touch the boarder of this game,
  * the direction is changed as if the DotPixObject is bouncing away from the boarder
  */
 void DotPixObject::move() {
     // check coordinates and correct direction
+    // bounce away from the top boarder
     if (getX() <= 1) {
         switch (getDir()) {
             case Direction::DOWN_LEFT :
@@ -43,6 +44,7 @@ void DotPixObject::move() {
         }
     }
 
+    // bounce away from the bottom boarder
     if (getX() >= getGameEngineWidth() - 2) {
         switch (getDir()) {
             case Direction::DOWN_RIGHT :
@@ -56,6 +58,7 @@ void DotPixObject::move() {
         }
     }
 
+    // bounce away from the left border
     if (getY() <= 1) {
         switch (getDir()) {
             case Direction::UP_RIGHT :
@@ -69,6 +72,7 @@ void DotPixObject::move() {
         }
     }
 
+    // bounce away from the right border
     if (getY() >= getGameEngineHeight() - 2) {
         switch (getDir()) {
             case Direction::DOWN_RIGHT :

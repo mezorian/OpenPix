@@ -12,7 +12,7 @@
 // ---- OpenPix includes ----
 #include "OpenPixGameEngine.h"
 #include "DotPixObject.h"
-#include "BoarderPixObject.h"
+#include "BorderPixObject.h"
 #include "QtUiOutputDriver.h"
 // ----
 

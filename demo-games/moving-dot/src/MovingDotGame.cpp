@@ -47,14 +47,14 @@ void MovingDotGame::init() {
         pixObjects.push_back(dot);
     }
 
-    PixObject boarder;
-    boarder.setPixObjectType(new BoarderPixObject());
-    boarder.setGameEngineHeight(pixMap.size());
-    boarder.setGameEngineWidth(pixMap[0].size());
-    boarder.setY(0);
-    boarder.setX(0);
-    boarder.create();
-    pixObjects.push_back(boarder);
+    PixObject border;
+    border.setPixObjectType(new BorderPixObject());
+    border.setGameEngineHeight(pixMap.size());
+    border.setGameEngineWidth(pixMap[0].size());
+    border.setY(0);
+    border.setX(0);
+    border.create();
+    pixObjects.push_back(border);
 
     // initialize the output-drivers
     pixMapOutputDriver.init();
