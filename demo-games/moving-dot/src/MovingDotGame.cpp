@@ -37,25 +37,25 @@ MovingDotGame::MovingDotGame(int width_, int height_, QApplication &application_
 void MovingDotGame::init() {
     // create a DotPixObject and add it to the game
     PixObject dot;
-    dot.setY(5);
-    dot.setX(5);
     dot.setPixObjectType(new DotPixObject());
     dot.setGameEngineHeight(pixMap.size());
     dot.setGameEngineWidth(pixMap[0].size());
+    dot.setY(rand() % dot.getGameEngineHeight());
+    dot.setX(rand() % dot.getGameEngineWidth());
     dot.create();
     pixObjects.push_back(dot);
     // copy first DotPixObject several times and add the copies to the game
     PixObject dot2 = dot;
-    dot2.setY(0);
-    dot2.setX(0);
+    dot2.setY(rand() % dot2.getGameEngineHeight());
+    dot2.setX(rand() % dot2.getGameEngineWidth());
     pixObjects.push_back(dot2);
     PixObject dot3 = dot;
-    dot3.setY(4);
-    dot3.setX(3);
+    dot3.setY(rand() % dot3.getGameEngineHeight());
+    dot3.setX(rand() % dot3.getGameEngineWidth());
     pixObjects.push_back(dot3);
     PixObject dot4 = dot;
-    dot4.setY(6);
-    dot4.setX(8);
+    dot4.setY(rand() % dot4.getGameEngineHeight());
+    dot4.setX(rand() % dot4.getGameEngineWidth());
     pixObjects.push_back(dot4);
     // initialize the output-drivers
     pixMapOutputDriver.init();
