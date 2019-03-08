@@ -52,4 +52,5 @@ HEADERS += \
     output-driver/QtUiOutputDriver.h \
     demo-games/moving-dot/include/DotPixObject.h \
     demo-games/moving-dot/include/MovingDotGame.h \
-    demo-games/moving-dot/include/DotPixObject.h
+    demo-games/moving-dot/include/DotPixObject.h \
+    include/Types.h

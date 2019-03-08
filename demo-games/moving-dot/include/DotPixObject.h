@@ -11,6 +11,7 @@
 
 // ---- OpenPix includes ----
 #include "PixObjectType.h"
+#include "Types.h"
 // ----
 
 /**
@@ -21,6 +22,7 @@
  * In respect of this the DotPixObject-class is a so called 'ConcreteStrategy' within the Strategy-Pattern.
  */
 class DotPixObject : public PixObjectType {
+
     public:
         /* --- constructor --- */
         DotPixObject() {};
@@ -29,6 +31,7 @@ class DotPixObject : public PixObjectType {
         void create();
 
     private:
+        Direction dir = rand()%4;
 
 
 };
