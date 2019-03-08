@@ -36,6 +36,17 @@ MovingDotGame::MovingDotGame(int width_, int height_, QApplication &application_
  */
 void MovingDotGame::init() {
     // create a DotPixObject and add it to the game
+    for (int i=0; i < 4; i++) {
+        PixObject dot;
+        dot.setPixObjectType(new DotPixObject());
+        dot.setGameEngineHeight(pixMap.size());
+        dot.setGameEngineWidth(pixMap[0].size());
+        dot.setY(rand() % dot.getGameEngineHeight());
+        dot.setX(rand() % dot.getGameEngineWidth());
+        dot.create();
+        pixObjects.push_back(dot);
+    }
+/*
     PixObject dot;
     dot.setPixObjectType(new DotPixObject());
     dot.setGameEngineHeight(pixMap.size());
@@ -56,7 +67,7 @@ void MovingDotGame::init() {
     PixObject dot4 = dot;
     dot4.setY(rand() % dot4.getGameEngineHeight());
     dot4.setX(rand() % dot4.getGameEngineWidth());
-    pixObjects.push_back(dot4);
+    pixObjects.push_back(dot4);*/
     // initialize the output-drivers
     pixMapOutputDriver.init();
 }
@@ -103,7 +114,7 @@ void MovingDotGame::executeGameLogic() {
             // game-logic : move the PixObject in the direction right down
             // move also checks if the PixObject is out of the coordinates of the pixMap.
             // The coordinate value which is out of the possible values will get a random possible value
-            pixObjects[i].move(1,1);
+            pixObjects[i].move();
 
             // iterate pixMap of current PixObject and paint every Pix
             // this means every active / non-transparent Pix is copied to the

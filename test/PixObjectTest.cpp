@@ -235,7 +235,7 @@ TEST_CASE("move testing") {
     int oldX = pixObject.getX();
     int oldY = pixObject.getY();
 
-    pixObject.move(deltaY,deltaX);
+    pixObject.move();
     REQUIRE(pixObject.getX() >= 0);
     REQUIRE(pixObject.getX() < pixMapDaemonWidth);
     REQUIRE(pixObject.getY() >= 0);

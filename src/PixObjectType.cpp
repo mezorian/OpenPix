@@ -34,6 +34,78 @@ int PixObjectType::getHeight() {
 }
 
 /**
+ * PixObjectType::getX
+ * @brief getter of the member-variable x
+ * @return the current value of the member-variable x, which is the x-coordinate of upper-left Pix
+ */
+int PixObjectType::getX() const {
+    return x;
+}
+
+/**
+ * PixObjectType::setX
+ * @brief setter of the member-variable x
+ * @param value the new value for the member-variable x, which is the x-coordinate of upper-left Pix
+ */
+void PixObjectType::setX(int value_) {
+    x = value_;
+}
+
+/**
+ * PixObjectType::getY
+ * @brief getter of the member-variable y
+ * @return the current value of the member-variable y, which is the y-coordinate of upper-left Pix
+ */
+int PixObjectType::getY() const {
+    return y;
+}
+
+/**
+ * PixObjectType::setY
+ * @brief setter of the member-variable y
+ * @param value the new value for the member-variable y, which is the y-coordinate of upper-left Pix
+ */
+void PixObjectType::setY(int value_) {
+    y = value_;
+}
+
+/**
+ * PixObjectType::getGameEngineWidth
+ * @brief getter of the member-variable gameEngineWidth
+ * @return the current value of the member-variable gameEngineWidth
+ */
+int PixObjectType::getGameEngineWidth() const {
+    return gameEngineWidth;
+}
+
+/**
+ * PixObjectType::setGameEngineWidth
+ * @brief setter of the member-variable gameEngineWidth
+ * @param value the new value for the member-variable gameEngineWidth
+ */
+void PixObjectType::setGameEngineWidth(int value_) {
+    gameEngineWidth = value_;
+}
+
+/**
+ * PixObjectType::getGameEngineHeight
+ * @brief getter of the member-variable gameEngineHeight
+ * @return the current value of the member-variable gameEngineHeight
+ */
+int PixObjectType::getGameEngineHeight() const {
+    return gameEngineHeight;
+}
+
+/**
+ * PixObjectType::setGameEngineWidth
+ * @brief setter of the member-variable gameEngineWidth
+ * @param value the new value for the member-variable gameEngineWidth
+ */
+void PixObjectType::setGameEngineHeight(int value_) {
+    gameEngineHeight = value_;
+}
+
+/**
  * PixObjectType::hasPixMap
  * @brief returns false if the pixMap is empty, otherwise true
  * @return returns false if the pixMap is empty, otherwise true

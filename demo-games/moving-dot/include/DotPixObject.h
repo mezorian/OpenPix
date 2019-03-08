@@ -9,6 +9,8 @@
 #ifndef DotPixObject_H
 #define DotPixObject_H
 
+// ---- Third party includes ----
+#include <cstdlib>
 // ---- OpenPix includes ----
 #include "PixObjectType.h"
 #include "Types.h"
@@ -29,9 +31,13 @@ class DotPixObject : public PixObjectType {
 
         /* --- functions which were to implement --- */
         void create();
+        void move();
+
+        Direction getDir() const;
+        void setDir(const Direction &value_);
 
     private:
-        Direction dir = rand()%4;
+        Direction dir = Direction(rand()%4);
 
 
 };
