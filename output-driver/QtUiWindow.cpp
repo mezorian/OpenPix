@@ -20,7 +20,7 @@
  * Furthermore it sets the size of the Window
  */
 QtUiWindow::QtUiWindow() : QMainWindow(new QWidget()) {
-    setGeometry(0,0,800,600);
+    setGeometry(400,400,300,200);
 }
 
 /* --- methods for painting the pixMap to the output-device --- */
@@ -87,4 +87,23 @@ vector<vector<Pix> > *QtUiWindow::getPixMap() const {
 void QtUiWindow::setPixMap(vector<vector<Pix> > *value_) {
     pixMap = value_;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
