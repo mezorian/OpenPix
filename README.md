@@ -37,3 +37,4 @@ ATTENTION : The OpenPixGameEngine-class is not intended for direct usage. To cre
 
 
 ![OpenPix v0.3](docs/screenshots/OpenPix_v0.3.png)
+![OpenPix v0.4](docs/screenshots/OpenPix_v0.4.gif)

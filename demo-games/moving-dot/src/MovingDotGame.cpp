@@ -36,27 +36,26 @@ MovingDotGame::MovingDotGame(int width_, int height_, QApplication &application_
  */
 void MovingDotGame::init() {
     // create a DotPixObject and add it to the game
-    PixObject dot;
-    dot.setY(5);
-    dot.setX(5);
-    dot.setPixObjectType(new DotPixObject());
-    dot.setGameEngineHeight(pixMap.size());
-    dot.setGameEngineWidth(pixMap[0].size());
-    dot.create();
-    pixObjects.push_back(dot);
-    // copy first DotPixObject several times and add the copies to the game
-    PixObject dot2 = dot;
-    dot2.setY(0);
-    dot2.setX(0);
-    pixObjects.push_back(dot2);
-    PixObject dot3 = dot;
-    dot3.setY(4);
-    dot3.setX(3);
-    pixObjects.push_back(dot3);
-    PixObject dot4 = dot;
-    dot4.setY(6);
-    dot4.setX(8);
-    pixObjects.push_back(dot4);
+    for (int i=0; i < 4; i++) {
+        PixObject dot;
+        dot.setPixObjectType(new DotPixObject());
+        dot.setGameEngineHeight(pixMap.size());
+        dot.setGameEngineWidth(pixMap[0].size());
+        dot.setY(rand() % dot.getGameEngineHeight());
+        dot.setX(rand() % dot.getGameEngineWidth());
+        dot.create();
+        pixObjects.push_back(dot);
+    }
+
+    PixObject border;
+    border.setPixObjectType(new BorderPixObject());
+    border.setGameEngineHeight(pixMap.size());
+    border.setGameEngineWidth(pixMap[0].size());
+    border.setY(0);
+    border.setX(0);
+    border.create();
+    pixObjects.push_back(border);
+
     // initialize the output-drivers
     pixMapOutputDriver.init();
 }
@@ -103,7 +102,7 @@ void MovingDotGame::executeGameLogic() {
             // game-logic : move the PixObject in the direction right down
             // move also checks if the PixObject is out of the coordinates of the pixMap.
             // The coordinate value which is out of the possible values will get a random possible value
-            pixObjects[i].move(1,1);
+            pixObjects[i].move();
 
             // iterate pixMap of current PixObject and paint every Pix
             // this means every active / non-transparent Pix is copied to the

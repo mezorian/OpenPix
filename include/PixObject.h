@@ -37,7 +37,7 @@ class PixObject {
 
         /* --- functions which are implemented by pixObjectType --- */
         void create();
-        void move(int yDelta_ = 1, int xDelta_ = 1);
+        void move();
 
         int getWidth();
         int getHeight();
@@ -61,12 +61,8 @@ class PixObject {
         int getGameEngineHeight() const;
         void setGameEngineHeight(int value_);
 
-private:
+    private:
         PixObjectType *pixObjectType;
-        int x; // x-coordinate of upper-left Pix
-        int y; // y-coordinate of upper-left Pix
-        int gameEngineWidth;  // TODO : search for a better solution
-        int gameEngineHeight; // than this in a later version
 
 };
 

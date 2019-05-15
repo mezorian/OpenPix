@@ -9,8 +9,11 @@
 #ifndef DotPixObject_H
 #define DotPixObject_H
 
+// ---- Third party includes ----
+#include <cstdlib>
 // ---- OpenPix includes ----
 #include "PixObjectType.h"
+#include "Types.h"
 // ----
 
 /**
@@ -21,14 +24,20 @@
  * In respect of this the DotPixObject-class is a so called 'ConcreteStrategy' within the Strategy-Pattern.
  */
 class DotPixObject : public PixObjectType {
+
     public:
         /* --- constructor --- */
         DotPixObject() {};
 
         /* --- functions which were to implement --- */
         void create();
+        void move();
+
+        Direction getDir() const;
+        void setDir(const Direction &value_);
 
     private:
+        Direction dir = Direction(rand()%4);
 
 
 };
