@@ -13,6 +13,7 @@
 #include "vector"
 // ---- OpenPix includes ----
 #include "Pix.h"
+#include "StateMachine.h"
 // ----
 
 
@@ -54,16 +55,21 @@ class PixObjectType {
         int getGameEngineHeight() const;
         void setGameEngineHeight(int value_);
 
+        // TODO : double-check if this is needed
+        StateMachine getStateMachine() const;
+        void setStateMachine(const StateMachine &value);
+
         bool hasPixMap();
         Pix getPix(int y_, int x_);
 
         vector<vector<Pix>> pixMap;
 
-    private:
+private:
         int x; // x-coordinate of upper-left Pix
         int y; // y-coordinate of upper-left Pix
         int gameEngineWidth;  // TODO : search for a better solution
         int gameEngineHeight; // than this in a later version
+        StateMachine stateMachine;
 
 };
 

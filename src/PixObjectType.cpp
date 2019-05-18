@@ -136,3 +136,13 @@ Pix PixObjectType::getPix(int y_,int x_) {
     }
 
 }
+
+StateMachine PixObjectType::getStateMachine() const
+{
+    return stateMachine;
+}
+
+void PixObjectType::setStateMachine(const StateMachine &value)
+{
+    stateMachine = value;
+}

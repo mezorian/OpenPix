@@ -24,11 +24,15 @@ INCLUDEPATH += demo-games/moving-dot/include/
 INCLUDEPATH += output-driver/
 
 SOURCES += main.cpp \
+    demo-games/moving-dot/stateMachine/CollidingState.cpp \
+    demo-games/moving-dot/stateMachine/MovingFastState.cpp \
+    demo-games/moving-dot/stateMachine/MovingSlowState.cpp \
     main_application.cpp \
     src/Pix.cpp \
     src/PixObject.cpp \
     src/PixObjectType.cpp \
     src/OpenPixGameEngine.cpp \
+    src/StateMachine.cpp \
     test/MiscellaneousTest.cpp \
     test/PixTest.cpp \
     output-driver/PixMapOutputDriver.cpp \
@@ -41,9 +45,13 @@ SOURCES += main.cpp \
     demo-games/moving-dot/src/BorderPixObject.cpp
 
 HEADERS += \
+    demo-games/moving-dot/stateMachine/CollidingState.h \
+    demo-games/moving-dot/stateMachine/MovingFastState.h \
+    demo-games/moving-dot/stateMachine/MovingSlowState.h \
     include/Pix.h \
     include/PixObject.h \
     include/PixObjectType.h \
+    include/StateMachine.h \
     include/catch.hpp \
     include/OpenPixGameEngine.h \
     output-driver/PixMapOutputDriver.h \
